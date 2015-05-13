@@ -1,0 +1,26 @@
+{
+  "CV": {
+    "lon": -24.0,
+    "lat": 16.0,
+    "name": "Cape Verde",
+    "fullName": "Republic of Cape Verde"
+  },
+  "MA": {
+    "lon": -5.0,
+    "lat": 32.0,
+    "name": "Morocco",
+    "fullName": "Kingdom of Morocco"
+  },
+  "AO": {
+    "lon": 18.5,
+    "lat": -12.5,
+    "name": "Angola",
+    "fullName": "Republic of Angola"
+  },
+  "VN": {
+    "lon": 107.833333,
+    "lat": 16.166667,
+    "name": "Vietnam",
+    "fullName": "Socialist Republic of Vietnam"
+  }
+}

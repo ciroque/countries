@@ -2,28 +2,28 @@
   {
     "name": "Andorra",
     "fullName": "Principality of Andorra",
-    "countryCode": "AD",
+    "code": "AD",
     "lon": 1.5,
     "lat": 42.5
   },
   {
     "name": "United Arab Emirates",
     "fullName": "United Arab Emirates",
-    "countryCode": "AE",
+    "code": "AE",
     "lon": 54,
     "lat": 24
   },
   {
     "name": "Afghanistan",
     "fullName": "Islamic Republic of Afghanistan",
-    "countryCode": "AF",
+    "code": "AF",
     "lon": 66,
     "lat": 33
   },
   {
     "name": "Antigua and Barbuda",
     "fullName": "Antigua and Barbuda",
-    "countryCode": "AG",
+    "code": "AG",
     "lon": -61.8,
     "lat": 17.05
   }

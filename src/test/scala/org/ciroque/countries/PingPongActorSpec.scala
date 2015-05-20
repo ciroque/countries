@@ -18,10 +18,17 @@ class PingPongActorSpec(_system: ActorSystem)
   }
 
   "A Ping actor" must {
-    "send back a ping on a pong" in {
+    "send back a pong message with the text 'pong' by default" in {
       val pingActor = system.actorOf(PingActor.props)
-      pingActor ! PingActor.EmptyMessage()
+      pingActor ! None
       expectMsg(PingActor.PongMessage("pong"))
+    }
+
+    "send back a pong message with the given text" in {
+      val message = "this is the message"
+      val pingActor = system.actorOf(PingActor.props)
+      pingActor ! PingActor.PingMessage(message)
+      expectMsg(PingActor.PongMessage(message))
     }
   }
 }

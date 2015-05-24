@@ -14,16 +14,9 @@ class CountryServiceSpec
 
   "CountryService" should {
     "Return documentation instructions on the root path" in {
-      Get() ~> routes ~> check {
+      Get("/countries") ~> routes ~> check {
         contentType.mediaType mustEqual `application/json`
         responseAs[String] must contain("/documentation")
-      }
-    }
-
-    "Do something really fun when accessing the swagger docs" in {
-      Get("/documentation") ~> routes ~> check {
-        contentType.mediaType mustEqual `application/json`
-        responseAs[String] must contain("FOO")
       }
     }
   }

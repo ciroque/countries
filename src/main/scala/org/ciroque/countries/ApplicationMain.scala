@@ -10,13 +10,12 @@ import spray.can.Http
 import scala.concurrent.duration._
 
 object ApplicationMain extends App {
-  implicit val system = ActorSystem("MyActorSystem")
+  implicit val system = ActorSystem("countries-actor-system")
   implicit val timeout = Timeout(5.seconds)
 
-  val pingActor = system.actorOf(PingActor.props, "pingActor")
-//  system.awaitTermination()
+  val pingActor = system.actorOf(PingActor.props, "ping-actor")
 
   val dataFileReader = new CountryDataFileReader("/countries.json")
-  val service = system.actorOf(Props(new CountryServiceActor(dataFileReader)), "country-service")
-  IO(Http) ? Http.Bind(service, interface = "localhost", port = 35762)
+  val service = system.actorOf(Props(new CountryServiceActor(dataFileReader)), "country-service-actor")
+  IO(Http) ? Http.Bind(service, interface = "localhost", port = 35784)
 }

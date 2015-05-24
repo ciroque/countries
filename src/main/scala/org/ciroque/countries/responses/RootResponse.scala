@@ -7,9 +7,3 @@ object RootResponseProtocol extends DefaultJsonProtocol {
 }
 
 case class RootResponse(message: String)
-
-//object RootResponse {
-//  def RootResponse(msg: String): Unit = {
-//    new RootResponse(msg)
-//  }
-//}

@@ -1,10 +1,22 @@
 package org.ciroque.countries
 
-import akka.actor.ActorSystem
+import akka.actor.{ActorSystem, Props}
+import akka.io.IO
+import akka.pattern.ask
+import akka.util.Timeout
+import org.ciroque.countries.responses.CountryServiceActor
+import spray.can.Http
+
+import scala.concurrent.duration._
 
 object ApplicationMain extends App {
-  val system = ActorSystem("MyActorSystem")
+  implicit val system = ActorSystem("MyActorSystem")
+  implicit val timeout = Timeout(5.seconds)
+
   val pingActor = system.actorOf(PingActor.props, "pingActor")
-  system.awaitTermination()
-//  IO(Http) ? Http.Bind(service, interface = "localhost", port = 35762)
+//  system.awaitTermination()
+
+  val dataFileReader = new CountryDataFileReader("/countries.json")
+  val service = system.actorOf(Props(new CountryServiceActor(dataFileReader)), "country-service")
+  IO(Http) ? Http.Bind(service, interface = "localhost", port = 35762)
 }

@@ -9,13 +9,15 @@ import spray.routing.HttpService
 @Api(value = "/countries", description = "Countries micro-service. Exposes basic information about countries.")
 trait CountryService extends HttpService {
 
-  @ApiOperation(value = "I don't know what this is.", notes = "These are the notes")
-  def rootRoute = path("countries") {
-    get {
-      respondWithMediaType(`application/json`) {
-        complete {
-          import org.ciroque.countries.responses.RootResponseProtocol.RootResponseFormat
-          RootResponse("Please use the provided search and retrieval endpoints. Documentation can be found at the following URI: /documentation")
+  @ApiOperation(value = "Hypermedia As The Engine Of Application State starting point.", notes = "These are the notes")
+  def rootRoute = pathPrefix("countries") {
+    pathEndOrSingleSlash {
+      get {
+        respondWithMediaType(`application/json`) {
+          complete {
+            import org.ciroque.countries.responses.RootResponseProtocol.RootResponseFormat
+            RootResponse("Countries of the World", Map("countryCodeSearch" -> "/countries/{countryCode}"))
+          }
         }
       }
     }

@@ -16,7 +16,7 @@ class CountryServiceSpec
     "Return documentation instructions on the root path" in {
       Get("/countries") ~> routes ~> check {
         contentType.mediaType mustEqual `application/json`
-        responseAs[String] must contain("/documentation")
+        responseAs[String] must contain("countryCodeSearch")
       }
     }
   }

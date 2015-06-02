@@ -16,7 +16,7 @@ class CountryQueryActorSpec extends TestKit(ActorSystem("CountryQueryActorTestin
   with BeforeAndAfterAll
   with ImplicitSender {
 
-  val CALL_TIMEOUT = 50 millis
+  val CALL_TIMEOUT = 70 millis
 
   val noCountries = List()
 

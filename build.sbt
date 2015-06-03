@@ -1,3 +1,5 @@
+import com.typesafe.sbt.SbtNativePackager._
+
 name := """countries"""
 
 version := "1.0"
@@ -18,3 +20,13 @@ libraryDependencies ++= Seq(
   , "io.spray" %% "spray-json" % "1.3.0"
   , "com.gettyimages" %% "spray-swagger" % "0.5.0"
 )
+
+enablePlugins(JavaServerAppPackaging)
+
+packageSummary := "Countries of the World microservice"
+
+packageDescription := "Countries Service"
+
+maintainer := "Steve Wagner <scalawagz@outlook.com>"
+
+name := "countries"

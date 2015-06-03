@@ -13,15 +13,16 @@ class CountryServiceActor(loader: CountryDataLoader)
 
   override def actorRefFactory = context
 
-  val countries = new CountryService {
+  val countryService = new CountryService {
+    implicit lazy val countries = loader.load()
     override implicit def actorRefFactory: ActorRefFactory =  context
   }
 
-  var swagger = new SwaggerService {
+  var swaggerService = new SwaggerService {
     override implicit def actorRefFactory: ActorRefFactory =  context
   }
 
-  val swaggerService = new SwaggerHttpService {
+  val swaggerHttpService = new SwaggerHttpService {
     override def apiTypes = Seq(typeOf[CountryService])
     override def apiVersion = "1.0"
     override def baseUrl = "/"
@@ -30,5 +31,5 @@ class CountryServiceActor(loader: CountryDataLoader)
     override def apiInfo = Some(new ApiInfo("Countries", "Countries of the world.", "", "Steve Wagner (scalawagz@outlook.com)", "", ""))
   }
 
-  override def receive: Receive = runRoute(countries.routes ~ swaggerService.routes ~ swagger.routes)
+  override def receive: Receive = runRoute(countryService.routes ~ swaggerHttpService.routes ~ swaggerService.routes)
 }

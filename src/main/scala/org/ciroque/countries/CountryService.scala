@@ -25,7 +25,7 @@ trait CountryService extends HttpService {
   val templeDataQuery: ActorRef = actorRefFactory.actorOf(Props(classOf[CountryQueryActor], countries.getOrElse(List())), "country-query")
 
   val corsHeaders = List(
-    RawHeader("Access-Control-Allow-Origin", "*"), // TODO: Get current hostname
+    RawHeader("Access-Control-Allow-Origin", "*"),
     RawHeader("Access-Control-Allow-Headers", "Content-Type"),
     RawHeader("Access-Control-Allow-Methods", "GET")
   )
@@ -46,13 +46,17 @@ trait CountryService extends HttpService {
   @ApiOperation(value = "All countries end-point", notes = "")
   def allCountriesRoute = pathPrefix(Stringz.Routes.Countries) {
     pathEndOrSingleSlash {
-      get {
-        respondWithMediaType(`application/json`) {
-          complete {
-            import org.ciroque.countries.responses.CountryResponseProtocol._
-            val something = ask(templeDataQuery, EmptyQuery)
-            val somethingElse = something.mapTo[CountryResponse]
-            somethingElse
+      requestUri { uri =>
+        get {
+          respondWithMediaType(`application/json`) {
+            respondWithHeaders(corsHeaders) {
+              complete {
+                import org.ciroque.countries.responses.CountryResponseProtocol._
+                val something = ask(templeDataQuery, EmptyQuery)
+                val somethingElse = something.mapTo[CountryResponse]
+                somethingElse
+              }
+            }
           }
         }
       }

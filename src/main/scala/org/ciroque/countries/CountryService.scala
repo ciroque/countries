@@ -2,16 +2,15 @@ package org.ciroque.countries
 
 import java.util.concurrent.TimeUnit
 
-import akka.actor.{Props, ActorRef}
+import akka.actor.{ActorRef, Props}
 import akka.util.Timeout
 import com.wordnik.swagger.annotations.{Api, ApiOperation}
 import org.ciroque.countries.model.Country
-import org.ciroque.countries.queries.CountryCodeQuery
+import org.ciroque.countries.queries.{EmptyQuery, CountryCodeQuery}
 import org.ciroque.countries.responses.{CountryResponse, RootResponse}
 import spray.http.HttpHeaders.RawHeader
 import spray.http.MediaTypes._
 import spray.httpx.SprayJsonSupport.sprayJsonMarshaller
-import spray.json._
 import spray.routing.HttpService
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -31,8 +30,8 @@ trait CountryService extends HttpService {
     RawHeader("Access-Control-Allow-Methods", "GET")
   )
 
-  @ApiOperation(value = "Hypermedia As The Engine Of Application State starting point.", notes = "These are the notes")
-  def rootRoute = pathPrefix(Stringz.Routes.Countries) {
+  @ApiOperation(value = "Hypermedia As The Engine Of Application State starting point.", notes = "")
+  def rootRoute =
     pathEndOrSingleSlash {
       get {
         respondWithMediaType(`application/json`) {
@@ -43,8 +42,24 @@ trait CountryService extends HttpService {
         }
       }
     }
+
+  @ApiOperation(value = "All countries end-point", notes = "")
+  def allCountriesRoute = pathPrefix(Stringz.Routes.Countries) {
+    pathEndOrSingleSlash {
+      get {
+        respondWithMediaType(`application/json`) {
+          complete {
+            import org.ciroque.countries.responses.CountryResponseProtocol._
+            val something = ask(templeDataQuery, EmptyQuery)
+            val somethingElse = something.mapTo[CountryResponse]
+            somethingElse
+          }
+        }
+      }
+    }
   }
 
+  @ApiOperation(value = "Country code search end-point", notes = "")
   def countryCodeQueryRoute = pathPrefix(Stringz.Routes.Countries) {
     pathEndOrSingleSlash {
       requestUri { uri =>
@@ -56,12 +71,7 @@ trait CountryService extends HttpService {
                   import org.ciroque.countries.responses.CountryResponseProtocol._
                   val something = ask(templeDataQuery, new CountryCodeQuery(query))
                   val somethingElse = something.mapTo[CountryResponse]
-                  val somethingElseYet = somethingElse.map { result => result.toJson.toString() }
-                  val somethingElseAltogether = somethingElseYet.recover {
-                    case error => s"something bad happened => ${error.toString}"
-                  }
-                  println(s">>> For use in self link: ${uri.authority.host.address}")
-                  somethingElseAltogether
+                  somethingElse
                 }
               }
             }
@@ -71,5 +81,5 @@ trait CountryService extends HttpService {
     }
   }
 
-  def routes = countryCodeQueryRoute ~ rootRoute
+  def routes = rootRoute ~ countryCodeQueryRoute ~ allCountriesRoute
 }

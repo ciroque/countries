@@ -1,9 +1,8 @@
-package org.ciroque.countries.responses
+package org.ciroque.countries
 
 import akka.actor.ActorRefFactory
 import com.gettyimages.spray.swagger.SwaggerHttpService
 import com.wordnik.swagger.model.ApiInfo
-import org.ciroque.countries.{CountryDataLoader, CountryService, SwaggerService}
 import spray.routing.HttpServiceActor
 
 import scala.reflect.runtime.universe._

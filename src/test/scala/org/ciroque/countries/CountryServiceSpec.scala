@@ -17,17 +17,37 @@ class CountryServiceSpec
 
   "CountryService" should {
     "Return documentation instructions on the root path" in {
-      Get("/countries") ~> routes ~> check {
+      Get("/") ~> routes ~> check {
         contentType.mediaType mustEqual `application/json`
         responseAs[String] must contain("countryCodeSearch")
+      }
+    }
+
+    "Return the full list of countries on the countries endpoint" in {
+      Get(s"/${Stringz.Routes.Countries}/") ~> routes ~> check {
+        contentType.mediaType mustEqual `application/json`
+//        responseAs[CountryResponse] must contain("United States of America")
+        MockCountryDataLoader.countryList.foreach {
+          country =>
+            responseAs[String] must contain(country.fullName)
+        }
+        status.intValue must_== 200
       }
     }
 
     "Return the correct country from a valid country code" in {
       Get(s"/${Stringz.Routes.Countries}?countryCode=US") ~> routes ~> check {
         contentType.mediaType mustEqual `application/json`
+        status.intValue must_== 200
         responseAs[String] must contain("United States of America")
       }
     }
+
+//    "Return a 404 when given an invalid country code" in {
+//      Get(s"/${Stringz.Routes.Countries}?countryCode=ZZ") ~> routes ~> check {
+//        contentType.mediaType mustEqual `application/json`
+//        status.intValue must_== 404
+//      }
+//    }
   }
 }

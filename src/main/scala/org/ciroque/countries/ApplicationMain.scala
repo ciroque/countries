@@ -4,7 +4,6 @@ import akka.actor.{ActorSystem, Props}
 import akka.io.IO
 import akka.pattern.ask
 import akka.util.Timeout
-import org.ciroque.countries.responses.CountryServiceActor
 import spray.can.Http
 
 import scala.concurrent.duration._

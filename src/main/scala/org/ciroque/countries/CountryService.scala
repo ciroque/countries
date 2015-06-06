@@ -6,7 +6,7 @@ import akka.actor.{ActorRef, Props}
 import akka.util.Timeout
 import com.wordnik.swagger.annotations.{Api, ApiOperation}
 import org.ciroque.countries.model.Country
-import org.ciroque.countries.queries.{EmptyQuery, CountryCodeQuery}
+import org.ciroque.countries.queries.{CountryNameQuery, EmptyQuery, CountryCodeQuery}
 import org.ciroque.countries.responses.{CountryResponse, RootResponse}
 import spray.http.HttpHeaders.RawHeader
 import spray.http.MediaTypes._
@@ -81,5 +81,28 @@ trait CountryService extends HttpService {
     }
   }
 
-  def routes = rootRoute ~ countryCodeQueryRoute ~ allCountriesRoute
+  @ApiOperation(value = "Country name search end-point", notes = "")
+  def countryNameQueryRoute = pathPrefix(Stringz.Routes.Countries) {
+    pathEndOrSingleSlash {
+      requestUri { uri =>
+        get {
+          parameters("name") { query =>
+            respondWithMediaType(`application/json`) {
+              respondWithHeaders(corsHeaders) {
+                complete {
+                  import org.ciroque.countries.responses.CountryResponseProtocol._
+                  println(s"CountryService::countryNameQueryRoute($query)")
+                  val something = ask(templeDataQuery, new CountryNameQuery(query))
+                  val somethingElse = something.mapTo[CountryResponse]
+                  somethingElse
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  def routes = rootRoute ~ countryCodeQueryRoute ~ countryNameQueryRoute ~ allCountriesRoute
 }

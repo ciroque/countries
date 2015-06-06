@@ -43,6 +43,30 @@ class CountryServiceSpec
       }
     }
 
+    "Return the correct country from a valid country code in a case-insensitive manner" in {
+      Get(s"/${Stringz.Routes.Countries}?countryCode=us") ~> routes ~> check {
+        contentType.mediaType mustEqual `application/json`
+        status.intValue must_== 200
+        responseAs[String] must contain("United States of America")
+      }
+    }
+
+    "Return the correct country from a valid country name" in {
+      Get(s"/${Stringz.Routes.Countries}?name=Canada") ~> routes ~> check {
+        contentType.mediaType mustEqual `application/json`
+        status.intValue must_== 200
+        responseAs[String] must contain("People's Republic of Canadia")
+      }
+    }
+
+    "Return the correct country from a valid country name in a case-insensitive manner" in {
+      Get(s"/${Stringz.Routes.Countries}?name=canada") ~> routes ~> check {
+        contentType.mediaType mustEqual `application/json`
+        status.intValue must_== 200
+        responseAs[String] must contain("People's Republic of Canadia")
+      }
+    }
+
 //    "Return a 404 when given an invalid country code" in {
 //      Get(s"/${Stringz.Routes.Countries}?countryCode=ZZ") ~> routes ~> check {
 //        contentType.mediaType mustEqual `application/json`

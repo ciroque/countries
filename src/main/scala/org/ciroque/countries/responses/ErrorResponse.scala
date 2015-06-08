@@ -3,7 +3,7 @@ package org.ciroque.countries.responses
 import spray.json._
 
 object ErrorResponseProtocol extends DefaultJsonProtocol with RootJsonFormat[ErrorResponse] {
-  implicit val ErrorResponseFormat = jsonFormat1(ErrorResponse.apply)
+  implicit val ErrorResponseFormat = jsonFormat1(ErrorResponse)
 
   override def read(json: JsValue): ErrorResponse = ErrorResponse(null)
 
@@ -11,7 +11,3 @@ object ErrorResponseProtocol extends DefaultJsonProtocol with RootJsonFormat[Err
 }
 
 case class ErrorResponse(message: String)
-
-object ErrorResponse {
-  def ErrorResponse(message: String) = new ErrorResponse(message)
-}

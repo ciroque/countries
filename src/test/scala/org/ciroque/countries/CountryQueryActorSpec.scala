@@ -52,7 +52,7 @@ class CountryQueryActorSpec extends TestKit(ActorSystem("CountryQueryActorTestin
     "return all countries when an EmptyQuery is received" in {
       val templeDataQueryRef = system.actorOf(Props(classOf[CountryQueryActor], allCountries))
       within(CALL_TIMEOUT) {
-        templeDataQueryRef ! EmptyQuery
+        templeDataQueryRef ! new EmptyQuery()
         expectMsg(new CountryResponse(Some(allCountries)))
       }
     }

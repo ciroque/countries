@@ -1,3 +1,3 @@
 package org.ciroque.countries.queries
 
-case class CountryNameQuery(name: String)
+case class CountryNameQuery(name: String) extends Query

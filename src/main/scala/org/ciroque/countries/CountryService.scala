@@ -6,11 +6,12 @@ import akka.actor.{ActorRef, Props}
 import akka.util.Timeout
 import com.wordnik.swagger.annotations.{Api, ApiOperation}
 import org.ciroque.countries.model.Country
-import org.ciroque.countries.queries.{CountryNameQuery, EmptyQuery, CountryCodeQuery}
+import org.ciroque.countries.queries.{Query, CountryNameQuery, EmptyQuery, CountryCodeQuery}
 import org.ciroque.countries.responses.{CountryResponse, RootResponse}
 import spray.http.HttpHeaders.RawHeader
 import spray.http.MediaTypes._
 import spray.httpx.SprayJsonSupport.sprayJsonMarshaller
+import spray.routing
 import spray.routing.HttpService
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -30,6 +31,19 @@ trait CountryService extends HttpService {
     RawHeader("Access-Control-Allow-Methods", "GET")
   )
 
+  def performQueryAndRespond(query: Query): routing.Route = {
+    respondWithMediaType(`application/json`) {
+      respondWithHeaders(corsHeaders) {
+        complete {
+          import org.ciroque.countries.responses.CountryResponseProtocol._
+          val something = ask(templeDataQuery, query)
+          val somethingElse = something.mapTo[CountryResponse]
+          somethingElse
+        }
+      }
+    }
+  }
+
   @ApiOperation(value = "Hypermedia As The Engine Of Application State starting point.", notes = "")
   def rootRoute =
     pathEndOrSingleSlash {
@@ -48,16 +62,7 @@ trait CountryService extends HttpService {
     pathEndOrSingleSlash {
       requestUri { uri =>
         get {
-          respondWithMediaType(`application/json`) {
-            respondWithHeaders(corsHeaders) {
-              complete {
-                import org.ciroque.countries.responses.CountryResponseProtocol._
-                val something = ask(templeDataQuery, EmptyQuery)
-                val somethingElse = something.mapTo[CountryResponse]
-                somethingElse
-              }
-            }
-          }
+          performQueryAndRespond(new EmptyQuery())
         }
       }
     }
@@ -69,16 +74,7 @@ trait CountryService extends HttpService {
       requestUri { uri =>
         get {
           parameters("countryCode") { query =>
-            respondWithMediaType(`application/json`) {
-              respondWithHeaders(corsHeaders) {
-                complete {
-                  import org.ciroque.countries.responses.CountryResponseProtocol._
-                  val something = ask(templeDataQuery, new CountryCodeQuery(query))
-                  val somethingElse = something.mapTo[CountryResponse]
-                  somethingElse
-                }
-              }
-            }
+            performQueryAndRespond(new CountryCodeQuery(query))
           }
         }
       }
@@ -91,17 +87,7 @@ trait CountryService extends HttpService {
       requestUri { uri =>
         get {
           parameters("name") { query =>
-            respondWithMediaType(`application/json`) {
-              respondWithHeaders(corsHeaders) {
-                complete {
-                  import org.ciroque.countries.responses.CountryResponseProtocol._
-                  println(s"CountryService::countryNameQueryRoute($query)")
-                  val something = ask(templeDataQuery, new CountryNameQuery(query))
-                  val somethingElse = something.mapTo[CountryResponse]
-                  somethingElse
-                }
-              }
-            }
+            performQueryAndRespond(new CountryNameQuery(query))
           }
         }
       }

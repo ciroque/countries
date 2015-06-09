@@ -37,8 +37,8 @@ trait CountryService extends HttpService {
         complete {
           import org.ciroque.countries.responses.CountryResponseProtocol._
           val something = ask(templeDataQuery, query)
-          val somethingElse = something.mapTo[CountryResponse]
-          somethingElse
+          val somethingElse = something.mapTo[Option[List[Country]]]
+          somethingElse.map(list => CountryResponse(list))
         }
       }
     }

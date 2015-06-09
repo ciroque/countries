@@ -1,10 +1,9 @@
 package org.ciroque.countries
 
-import akka.actor.{Props, ActorSystem}
+import akka.actor.{ActorSystem, Props}
 import akka.testkit.{ImplicitSender, TestKit}
 import org.ciroque.countries.model.Country
-import org.ciroque.countries.queries.{CountryNameQuery, CountryCodeQuery, EmptyQuery}
-import org.ciroque.countries.responses.CountryResponse
+import org.ciroque.countries.queries.{CountryCodeQuery, CountryNameQuery, EmptyQuery}
 import org.scalatest._
 
 import scala.concurrent.duration._
@@ -45,7 +44,7 @@ class CountryQueryActorSpec extends TestKit(ActorSystem("CountryQueryActorTestin
       val templeDataQueryRef = system.actorOf(Props(classOf[CountryQueryActor], noCountries))
       within(CALL_TIMEOUT) {
         templeDataQueryRef ! None
-        expectMsg(new CountryResponse(None))
+        expectMsg(None)
       }
     }
 
@@ -53,7 +52,7 @@ class CountryQueryActorSpec extends TestKit(ActorSystem("CountryQueryActorTestin
       val templeDataQueryRef = system.actorOf(Props(classOf[CountryQueryActor], allCountries))
       within(CALL_TIMEOUT) {
         templeDataQueryRef ! new EmptyQuery()
-        expectMsg(new CountryResponse(Some(allCountries)))
+        expectMsg(Some(allCountries))
       }
     }
 
@@ -62,7 +61,7 @@ class CountryQueryActorSpec extends TestKit(ActorSystem("CountryQueryActorTestin
       val templeDataQueryRef = system.actorOf(Props(classOf[CountryQueryActor], allCountries))
       within(CALL_TIMEOUT) {
         templeDataQueryRef ! CountryCodeQuery(countryCode)
-        expectMsg(new CountryResponse(Some(List[Country](countryA))))
+        expectMsg(Some(List[Country](countryA)))
       }
     }
 
@@ -71,7 +70,7 @@ class CountryQueryActorSpec extends TestKit(ActorSystem("CountryQueryActorTestin
       val templeDataQueryRef = system.actorOf(Props(classOf[CountryQueryActor], allCountries))
       within(CALL_TIMEOUT) {
         templeDataQueryRef ! CountryCodeQuery(countryCode)
-        expectMsg(new CountryResponse(Some(List[Country](countryA))))
+        expectMsg(Some(List[Country](countryA)))
       }
     }
 
@@ -81,7 +80,7 @@ class CountryQueryActorSpec extends TestKit(ActorSystem("CountryQueryActorTestin
       val templeDataQueryRef = system.actorOf(Props(classOf[CountryQueryActor], allCountries))
       within(CALL_TIMEOUT) {
         templeDataQueryRef ! CountryNameQuery(name)
-        expectMsg(new CountryResponse(expected))
+        expectMsg(expected)
       }
     }
 
@@ -91,7 +90,7 @@ class CountryQueryActorSpec extends TestKit(ActorSystem("CountryQueryActorTestin
       val templeDataQueryRef = system.actorOf(Props(classOf[CountryQueryActor], allCountries))
       within(CALL_TIMEOUT) {
         templeDataQueryRef ! CountryNameQuery(name)
-        expectMsg(new CountryResponse(expected))
+        expectMsg(expected)
       }
     }
 
@@ -100,7 +99,7 @@ class CountryQueryActorSpec extends TestKit(ActorSystem("CountryQueryActorTestin
       val templeDataQueryRef = system.actorOf(Props(classOf[CountryQueryActor], allCountries))
       within(CALL_TIMEOUT) {
         templeDataQueryRef ! CountryCodeQuery(countryCode)
-        expectMsg(new CountryResponse(Some(List())))
+        expectMsg(Some(List()))
       }
     }
   }

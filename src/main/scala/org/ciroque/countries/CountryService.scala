@@ -6,10 +6,11 @@ import akka.actor.{ActorRef, Props}
 import akka.util.Timeout
 import com.wordnik.swagger.annotations.{Api, ApiOperation}
 import org.ciroque.countries.model.Country
-import org.ciroque.countries.queries.{Query, CountryNameQuery, EmptyQuery, CountryCodeQuery}
+import org.ciroque.countries.queries.{CountryCodeQuery, CountryNameQuery, EmptyQuery, Query}
 import org.ciroque.countries.responses.{CountryResponse, RootResponse}
 import spray.http.HttpHeaders.RawHeader
 import spray.http.MediaTypes._
+import spray.http.StatusCode
 import spray.httpx.SprayJsonSupport.sprayJsonMarshaller
 import spray.routing
 import spray.routing.HttpService
@@ -31,14 +32,18 @@ trait CountryService extends HttpService {
     RawHeader("Access-Control-Allow-Methods", "GET")
   )
 
-  def performQueryAndRespond(query: Query): routing.Route = {
+  def performQueryAndRespond( query: Query): routing.Route = {
+    val something = templeDataQuery ? query
+    val somethingElse = something.mapTo[Option[List[Country]]]
+    val statusCode = somethingElse.map {
+      case None => StatusCode.int2StatusCode(404)
+      case Some(_) => StatusCode.int2StatusCode(200)
+    }
     respondWithMediaType(`application/json`) {
       respondWithHeaders(corsHeaders) {
-        complete {
+        respondWithStatus(StatusCode.int2StatusCode(200)) {
           import org.ciroque.countries.responses.CountryResponseProtocol._
-          val something = ask(templeDataQuery, query)
-          val somethingElse = something.mapTo[Option[List[Country]]]
-          somethingElse.map(list => CountryResponse(list))
+          complete(somethingElse.map { list => CountryResponse(list) })
         }
       }
     }

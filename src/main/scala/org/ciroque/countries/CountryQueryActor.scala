@@ -7,9 +7,16 @@ import org.ciroque.countries.queries.{CountryCodeQuery, CountryNameQuery, EmptyQ
 class CountryQueryActor(countries: List[Country]) extends Actor {
   override def receive: Receive = {
     case None => sender ! None
-    case empty: EmptyQuery => println(s"#### CountryQueryActor:: EmptyQuery"); sender ! Some(countries)
-    case CountryCodeQuery(countryCode) =>  sender ! Some(countries.filter(country => country.code.toLowerCase.equals(countryCode.toLowerCase)))
-    case CountryNameQuery(name) => sender ! Some(countries.filter(country => country.name.toLowerCase.contains(name.toLowerCase)))
+    case empty: EmptyQuery => sender ! Some(countries)
+    case CountryCodeQuery(countryCode) =>  sender ! filterCountries(c => c.code.toLowerCase.equals(countryCode.toLowerCase))
+    case CountryNameQuery(name) => sender ! filterCountries(c => c.name.toLowerCase.contains(name.toLowerCase))
     case _ => println(s"!!!! CountryQueryActor:: Something else"); throw new IllegalArgumentException("Not sure what happened...")
+  }
+
+  private def filterCountries(countryFilter: Country => Boolean) = {
+    countries.filter(countryFilter) match {
+      case found if found.length == 0 => None
+      case found => Some(found)
+    }
   }
 }

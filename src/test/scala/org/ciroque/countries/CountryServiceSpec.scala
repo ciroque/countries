@@ -79,11 +79,15 @@ class CountryServiceSpec
       }
     }
 
-//    "Return a 404 when given an invalid country code" in {
-//      Get(s"/${Stringz.Routes.Countries}?countryCode=ZZ") ~> routes ~> check {
-//        contentType.mediaType mustEqual `application/json`
+    "Return a 404 when given an invalid country code" in {
+      Get(s"/${Stringz.Routes.Countries}?countryCode=ZZ") ~> routes ~> check {
+        val ras = responseAs[String]
+        println(s">>>>> $ras")
+
+        contentType.mediaType mustEqual `application/json`
+
 //        status.intValue must_== 404
-//      }
-//    }
+      }
+    }
   }
 }

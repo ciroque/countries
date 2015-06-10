@@ -94,12 +94,21 @@ class CountryQueryActorSpec extends TestKit(ActorSystem("CountryQueryActorTestin
       }
     }
 
-    "return an empty list when a CountryCodeQuery with a non-existent country code is received" in {
+    "return None when a CountryCodeQuery with a non-existent country code is received" in {
       val countryCode = "Z7"
       val templeDataQueryRef = system.actorOf(Props(classOf[CountryQueryActor], allCountries))
       within(CALL_TIMEOUT) {
         templeDataQueryRef ! CountryCodeQuery(countryCode)
-        expectMsg(Some(List()))
+        expectMsg(None)
+      }
+    }
+
+    "return None when a CountryNameQuery with a non-matching country name is received" in {
+      val countryName = "Kowabunga"
+      val templeDataQueryRef = system.actorOf(Props(classOf[CountryQueryActor], allCountries))
+      within(CALL_TIMEOUT) {
+        templeDataQueryRef ! CountryNameQuery(countryName)
+        expectMsg(None)
       }
     }
   }

@@ -1,8 +1,8 @@
 package org.ciroque.countries.responses
 
 import org.ciroque.countries.model.Country
-import spray.json._
 import org.ciroque.countries.model.CountryProtocol._
+import spray.json._
 
 object CountryResponseProtocol extends DefaultJsonProtocol with RootJsonFormat[CountryResponse] {
   implicit val CountryResponseFormat = jsonFormat1(CountryResponse.apply)

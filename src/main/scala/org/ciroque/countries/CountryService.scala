@@ -10,7 +10,7 @@ import org.ciroque.countries.queries.{CountryCodeQuery, CountryNameQuery, EmptyQ
 import org.ciroque.countries.responses.{CountryResponse, RootResponse}
 import spray.http.HttpHeaders.RawHeader
 import spray.http.MediaTypes._
-import spray.http.StatusCode
+import spray.http.{HttpResponse, StatusCode}
 import spray.httpx.SprayJsonSupport.sprayJsonMarshaller
 import spray.routing
 import spray.routing.HttpService
@@ -32,18 +32,23 @@ trait CountryService extends HttpService {
     RawHeader("Access-Control-Allow-Methods", "GET")
   )
 
-  def performQueryAndRespond( query: Query): routing.Route = {
+  def performQueryAndRespond(query: Query): routing.Route = {
     val something = templeDataQuery ? query
     val somethingElse = something.mapTo[Option[List[Country]]]
-    val statusCode = somethingElse.map {
+    def statusCode(countries: Option[List[Country]]): StatusCode = countries match {
       case None => StatusCode.int2StatusCode(404)
       case Some(_) => StatusCode.int2StatusCode(200)
     }
     respondWithMediaType(`application/json`) {
       respondWithHeaders(corsHeaders) {
-        respondWithStatus(StatusCode.int2StatusCode(200)) {
-          import org.ciroque.countries.responses.CountryResponseProtocol._
-          complete(somethingElse.map { list => CountryResponse(list) })
+        complete {
+          somethingElse.map {
+            list =>
+              import spray.json._
+              import org.ciroque.countries.responses.CountryResponseProtocol._
+              val body = CountryResponse(list).toJson.toString()
+              HttpResponse(statusCode(list), body)
+          }
         }
       }
     }

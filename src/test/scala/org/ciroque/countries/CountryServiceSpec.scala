@@ -26,6 +26,8 @@ class CountryServiceSpec
   "CountryService" should {
     "Return documentation instructions on the root path" in {
       Get("/") ~> routes ~> check {
+        status.intValue must_== 200
+        assertCorsHeaders(headers)
         contentType.mediaType mustEqual `application/json`
         responseAs[String] must contain("countryCodeSearch")
       }
@@ -33,60 +35,76 @@ class CountryServiceSpec
 
     "Return the full list of countries on the countries endpoint" in {
       Get(s"/${Stringz.Routes.Countries}/") ~> routes ~> check {
-        contentType.mediaType mustEqual `application/json`
-//        responseAs[CountryResponse] must contain("United States of America")
+        status.intValue must_== 200
+        assertCorsHeaders(headers)
         MockCountryDataLoader.countryList.foreach {
           country =>
             responseAs[String] must contain(country.fullName)
         }
-        status.intValue must_== 200
+        contentType.mediaType mustEqual `application/json`
       }
     }
 
     "Return the correct country from a valid country code" in {
       Get(s"/${Stringz.Routes.Countries}?countryCode=US") ~> routes ~> check {
+        status.intValue must_== 200
         assertCorsHeaders(headers)
         contentType.mediaType mustEqual `application/json`
-        status.intValue must_== 200
         responseAs[String] must contain("United States of America")
       }
     }
 
     "Return the correct country from a valid country code in a case-insensitive manner" in {
       Get(s"/${Stringz.Routes.Countries}?countryCode=us") ~> routes ~> check {
+        status.intValue must_== 200
         assertCorsHeaders(headers)
         contentType.mediaType mustEqual `application/json`
-        status.intValue must_== 200
         responseAs[String] must contain("United States of America")
       }
     }
 
     "Return the correct country from a valid country name" in {
       Get(s"/${Stringz.Routes.Countries}?name=Canada") ~> routes ~> check {
+        status.intValue must_== 200
         assertCorsHeaders(headers)
         contentType.mediaType mustEqual `application/json`
-        status.intValue must_== 200
         responseAs[String] must contain("People's Republic of Canadia")
       }
     }
 
     "Return the correct country from a valid country name in a case-insensitive manner" in {
       Get(s"/${Stringz.Routes.Countries}?name=canada") ~> routes ~> check {
+        status.intValue must_== 200
         assertCorsHeaders(headers)
         contentType.mediaType mustEqual `application/json`
-        status.intValue must_== 200
         responseAs[String] must contain("People's Republic of Canadia")
       }
     }
 
     "Return a 404 when given an invalid country code" in {
       Get(s"/${Stringz.Routes.Countries}?countryCode=ZZ") ~> routes ~> check {
-        val ras = responseAs[String]
-        println(s">>>>> $ras")
-
+        status.intValue must_== 404
+        assertCorsHeaders(headers)
         contentType.mediaType mustEqual `application/json`
+        responseAs[String] mustEqual "{}"
+      }
+    }
 
-//        status.intValue must_== 404
+    "Return a 404 when given an invalid country name" in {
+      Get(s"/${Stringz.Routes.Countries}?name=bolshevic") ~> routes ~> check {
+        status.intValue must_== 404
+        assertCorsHeaders(headers)
+        contentType.mediaType mustEqual `application/json`
+        responseAs[String] mustEqual "{}"
+      }
+    }
+
+    "Return a 404 when given an invalid country name" in {
+      Get(s"/${Stringz.Routes.Countries}?name=bolshevic") ~> routes ~> check {
+        status.intValue must_== 404
+        assertCorsHeaders(headers)
+        contentType.mediaType mustEqual `application/json`
+        responseAs[String] mustEqual "{}"
       }
     }
   }

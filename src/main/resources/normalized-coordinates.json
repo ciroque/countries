@@ -1,2717 +1,3460 @@
-{
-  "name": "Andorra",
-  "fullName": "Principality of Andorra",
-  "code": "AD",
-  "coordinates": {
-    "centroid": {
-      "lat": 42.5,
-      "lon": 1.5
-    }
-  }
-}
-{
-  "name": "United Arab Emirates",
-  "fullName": "United Arab Emirates",
-  "code": "AE",
-  "coordinates": {
-    "centroid": {
-      "lat": 24,
-      "lon": 54
-    }
-  }
-}
-{
-  "name": "Afghanistan",
-  "fullName": "Islamic Republic of Afghanistan",
-  "code": "AF",
-  "coordinates": {
-    "centroid": {
-      "lat": 33,
-      "lon": 66
-    }
-  }
-}
-{
-  "name": "Antigua and Barbuda",
-  "fullName": "Antigua and Barbuda",
-  "code": "AG",
-  "coordinates": {
-    "centroid": {
-      "lat": 17.05,
-      "lon": -61.8
-    }
-  }
-}
-{
-  "name": "Anguilla",
-  "fullName": "Anguilla",
-  "code": "AI",
-  "coordinates": {
-    "centroid": {
-      "lat": 18.216667,
-      "lon": -63.05
-    }
-  }
-}
-{
-  "name": "Albania",
-  "fullName": "Republic of Albania",
-  "code": "AL",
-  "coordinates": {
-    "centroid": {
-      "lat": 41,
-      "lon": 20
-    }
-  }
-}
-{
-  "name": "Armenia",
-  "fullName": "Republic of Armenia",
-  "code": "AM",
-  "coordinates": {
-    "centroid": {
-      "lat": 40,
-      "lon": 45
-    }
-  }
-}
-{
-  "name": "Angola",
-  "fullName": "Republic of Angola",
-  "code": "AO",
-  "coordinates": {
-    "centroid": {
-      "lat": -12.5,
-      "lon": 18.5
-    }
-  }
-}
-{
-  "name": "Argentina",
-  "fullName": "Argentine Republic",
-  "code": "AR",
-  "coordinates": {
-    "centroid": {
-      "lat": -34,
-      "lon": -64
-    }
-  }
-}
-{
-  "name": "American Samoa",
-  "fullName": "Territory of American Samoa",
-  "code": "AS",
-  "coordinates": {
-    "centroid": {
-      "lat": -14.3333333,
-      "lon": -170
-    }
-  }
-}
-{
-  "name": "Austria",
-  "fullName": "Republic of Austria",
-  "code": "AT",
-  "coordinates": {
-    "centroid": {
-      "lat": 47.333333,
-      "lon": 13.333333
-    }
-  }
-}
-{
-  "name": "Australia",
-  "fullName": "Commonwealth of Australia",
-  "code": "AU",
-  "coordinates": {
-    "centroid": {
-      "lat": -25,
-      "lon": 135
-    }
-  }
-}
-{
-  "name": "Aruba",
-  "fullName": "Aruba",
-  "code": "AW",
-  "coordinates": {
-    "centroid": {
-      "lat": 12.5,
-      "lon": -69.966667
-    }
-  }
-}
-{
-  "name": "Azerbaijan",
-  "fullName": "Republic of Azerbaijan",
-  "code": "AZ",
-  "coordinates": {
-    "centroid": {
-      "lat": 40.5,
-      "lon": 47.5
-    }
-  }
-}
-{
-  "name": "Bosnia and Herzegovina",
-  "fullName": "Bosnia and Herzegovina",
-  "code": "BA",
-  "coordinates": {
-    "centroid": {
-      "lat": 44.25,
-      "lon": 17.833333
-    }
-  }
-}
-{
-  "name": "Barbados",
-  "fullName": "Barbados",
-  "code": "BB",
-  "coordinates": {
-    "centroid": {
-      "lat": 13.166667,
-      "lon": -59.533333
-    }
-  }
-}
-{
-  "name": "Bangladesh",
-  "fullName": "People's Republic of Bangladesh",
-  "code": "BD",
-  "coordinates": {
-    "centroid": {
-      "lat": 24,
-      "lon": 90
-    }
-  }
-}
-{
-  "name": "Belgium",
-  "fullName": "Kingdom of Belgium",
-  "code": "BE",
-  "coordinates": {
-    "centroid": {
-      "lat": 50.833333,
-      "lon": 4
-    }
-  }
-}
-{
-  "name": "Burkina Faso",
-  "fullName": "Burkina Faso",
-  "code": "BF",
-  "coordinates": {
-    "centroid": {
-      "lat": 13,
-      "lon": -2
-    }
-  }
-}
-{
-  "name": "Bulgaria",
-  "fullName": "Republic of Bulgaria",
-  "code": "BG",
-  "coordinates": {
-    "centroid": {
-      "lat": 43,
-      "lon": 25
-    }
-  }
-}
-{
-  "name": "Bahrain",
-  "fullName": "Kingdom of Bahrain",
-  "code": "BH",
-  "coordinates": {
-    "centroid": {
-      "lat": 26,
-      "lon": 50.5
-    }
-  }
-}
-{
-  "name": "Burundi",
-  "fullName": "Republic of Burundi",
-  "code": "BI",
-  "coordinates": {
-    "centroid": {
-      "lat": -3.5,
-      "lon": 30
-    }
-  }
-}
-{
-  "name": "Benin",
-  "fullName": "Republic of Benin",
-  "code": "BJ",
-  "coordinates": {
-    "centroid": {
-      "lat": 9.5,
-      "lon": 2.25
-    }
-  }
-}
-{
-  "name": "Saint Barthelemy",
-  "fullName": "Saint Barthelemy",
-  "code": "BL",
-  "coordinates": {
-    "centroid": {
-      "lat": 17.9,
-      "lon": -62.833333
-    }
-  }
-}
-{
-  "name": "Bermuda",
-  "fullName": "Bermuda",
-  "code": "BM",
-  "coordinates": {
-    "centroid": {
-      "lat": 32.333333,
-      "lon": -64.75
-    }
-  }
-}
-{
-  "name": "Brunei",
-  "fullName": "Negara Brunei Darussalam",
-  "code": "BN",
-  "coordinates": {
-    "centroid": {
-      "lat": 4.5,
-      "lon": 114.666667
-    }
-  }
-}
-{
-  "name": "Bolivia",
-  "fullName": "Plurinational State of Bolivia",
-  "code": "BO",
-  "coordinates": {
-    "centroid": {
-      "lat": -17,
-      "lon": -65
-    }
-  }
-}
-{
-  "name": "Bonaire",
-  "fullName": "Bonaire  Sint Eustatius  and Saba",
-  "code": "BQ",
-  "coordinates": {
-    "centroid": {
-      "lat": 12.2,
-      "lon": -68.25
-    }
-  }
-}
-{
-  "name": "Brazil",
-  "fullName": "Federative Republic of Brazil",
-  "code": "BR",
-  "coordinates": {
-    "centroid": {
-      "lat": -10,
-      "lon": -55
-    }
-  }
-}
-{
-  "name": "Bahamas",
-  "fullName": "Commonwealth of The Bahamas",
-  "code": "BS",
-  "coordinates": {
-    "centroid": {
-      "lat": 24,
-      "lon": -76
-    }
-  }
-}
-{
-  "name": "Bhutan",
-  "fullName": "Kingdom of Bhutan",
-  "code": "BT",
-  "coordinates": {
-    "centroid": {
-      "lat": 27.5,
-      "lon": 90.5
-    }
-  }
-}
-{
-  "name": "Bouvet Island",
-  "fullName": "Bouvet Island",
-  "code": "BV",
-  "coordinates": {
-    "centroid": {
-      "lat": -54.433333,
-      "lon": 3.4
-    }
-  }
-}
-{
-  "name": "Botswana",
-  "fullName": "Republic of Botswana",
-  "code": "BW",
-  "coordinates": {
-    "centroid": {
-      "lat": -22,
-      "lon": 24
-    }
-  }
-}
-{
-  "name": "Belarus",
-  "fullName": "Republic of Belarus",
-  "code": "BY",
-  "coordinates": {
-    "centroid": {
-      "lat": 53,
-      "lon": 28
-    }
-  }
-}
-{
-  "name": "Belize",
-  "fullName": "Belize",
-  "code": "BZ",
-  "coordinates": {
-    "centroid": {
-      "lat": 17.25,
-      "lon": -88.75
-    }
-  }
-}
-{
-  "name": "Canada",
-  "fullName": "Canada",
-  "code": "CA",
-  "coordinates": {
-    "centroid": {
-      "lat": 60,
-      "lon": -96
-    }
-  }
-}
-{
-  "name": "Cocos (Keeling) Islands",
-  "fullName": "Territory of Cocos (Keeling) Islands",
-  "code": "CC",
-  "coordinates": {
-    "centroid": {
-      "lat": -12,
-      "lon": 96.833333
-    }
-  }
-}
-{
-  "name": "Democratic Republic of the Congo",
-  "fullName": "Democratic Republic of the Congo",
-  "code": "CD",
-  "coordinates": {
-    "centroid": {
-      "lat": 0,
-      "lon": 25
-    }
-  }
-}
-{
-  "name": "Central African Republic",
-  "fullName": "Central African Republic",
-  "code": "CF",
-  "coordinates": {
-    "centroid": {
-      "lat": 7,
-      "lon": 21
-    }
-  }
-}
-{
-  "name": "Republic of the Congo",
-  "fullName": "Republic of the Congo",
-  "code": "CG",
-  "coordinates": {
-    "centroid": {
-      "lat": -1,
-      "lon": 15
-    }
-  }
-}
-{
-  "name": "Switzerland",
-  "fullName": "Swiss Confederation",
-  "code": "CH",
-  "coordinates": {
-    "centroid": {
-      "lat": 47,
-      "lon": 8
-    }
-  }
-}
-{
-  "name": "Cote d'Ivoire",
-  "fullName": "Republic of Cote d'Ivoire",
-  "code": "CI",
-  "coordinates": {
-    "centroid": {
-      "lat": 8,
-      "lon": -5
-    }
-  }
-}
-{
-  "name": "Cook Islands",
-  "fullName": "Cook Islands",
-  "code": "CK",
-  "coordinates": {
-    "centroid": {
-      "lat": -16.083333,
-      "lon": -161.583333
-    }
-  }
-}
-{
-  "name": "Chile",
-  "fullName": "Republic of Chile",
-  "code": "CL",
-  "coordinates": {
-    "centroid": {
-      "lat": -30,
-      "lon": -71
-    }
-  }
-}
-{
-  "name": "Cameroon",
-  "fullName": "Republic of Cameroon",
-  "code": "CM",
-  "coordinates": {
-    "centroid": {
-      "lat": 6,
-      "lon": 12
-    }
-  }
-}
-{
-  "name": "China",
-  "fullName": "People's Republic of China",
-  "code": "CN",
-  "coordinates": {
-    "centroid": {
-      "lat": 35,
-      "lon": 105
-    }
-  }
-}
-{
-  "name": "Colombia",
-  "fullName": "Republic of Colombia",
-  "code": "CO",
-  "coordinates": {
-    "centroid": {
-      "lat": 4,
-      "lon": -72
-    }
-  }
-}
-{
-  "name": "Costa Rica",
-  "fullName": "Republic of Costa Rica",
-  "code": "CR",
-  "coordinates": {
-    "centroid": {
-      "lat": 10,
-      "lon": -84
-    }
-  }
-}
-{
-  "name": "Cuba",
-  "fullName": "Republic of Cuba",
-  "code": "CU",
-  "coordinates": {
-    "centroid": {
-      "lat": 22,
-      "lon": -79.5
-    }
-  }
-}
-{
-  "name": "Cape Verde",
-  "fullName": "Republic of Cape Verde",
-  "code": "CV",
-  "coordinates": {
-    "centroid": {
-      "lat": 16,
-      "lon": -24
-    }
-  }
-}
-{
-  "name": "Curaçao",
-  "fullName": "Land Curacao",
-  "code": "CW",
-  "coordinates": {
-    "centroid": {
-      "lat": 12.166667,
-      "lon": -69
-    }
-  }
-}
-{
-  "name": "Christmas Island",
-  "fullName": "Territory of Christmas Island",
-  "code": "CX",
-  "coordinates": {
-    "centroid": {
-      "lat": -10.5,
-      "lon": 105.666667
-    }
-  }
-}
-{
-  "name": "Cyprus",
-  "fullName": "Republic of Cyprus",
-  "code": "CY",
-  "coordinates": {
-    "centroid": {
-      "lat": 35,
-      "lon": 33
-    }
-  }
-}
-{
-  "name": "Czech Republic",
-  "fullName": "Czech Republic",
-  "code": "CZ",
-  "coordinates": {
-    "centroid": {
-      "lat": 49.75,
-      "lon": 15
-    }
-  }
-}
-{
-  "name": "Germany",
-  "fullName": "Federal Republic of Germany",
-  "code": "DE",
-  "coordinates": {
-    "centroid": {
-      "lat": 51.5,
-      "lon": 10.5
-    }
-  }
-}
-{
-  "name": "Djibouti",
-  "fullName": "Republic of Djibouti",
-  "code": "DJ",
-  "coordinates": {
-    "centroid": {
-      "lat": 11.5,
-      "lon": 42.5
-    }
-  }
-}
-{
-  "name": "Denmark",
-  "fullName": "Kingdom of Denmark",
-  "code": "DK",
-  "coordinates": {
-    "centroid": {
-      "lat": 56,
-      "lon": 10
-    }
-  }
-}
-{
-  "name": "Dominica",
-  "fullName": "Commonwealth of Dominica",
-  "code": "DM",
-  "coordinates": {
-    "centroid": {
-      "lat": 15.5,
-      "lon": -61.333333
-    }
-  }
-}
-{
-  "name": "Dominican Republic",
-  "fullName": "Dominican Republic",
-  "code": "DO",
-  "coordinates": {
-    "centroid": {
-      "lat": 19,
-      "lon": -70.666667
-    }
-  }
-}
-{
-  "name": "Algeria",
-  "fullName": "People's Democratic Republic of Algeria",
-  "code": "DZ",
-  "coordinates": {
-    "centroid": {
-      "lat": 28,
-      "lon": 3
-    }
-  }
-}
-{
-  "name": "Ecuador",
-  "fullName": "Republic of Ecuador",
-  "code": "EC",
-  "coordinates": {
-    "centroid": {
-      "lat": -2,
-      "lon": -77.5
-    }
-  }
-}
-{
-  "name": "Estonia",
-  "fullName": "Republic of Estonia",
-  "code": "EE",
-  "coordinates": {
-    "centroid": {
-      "lat": 59,
-      "lon": 26
-    }
-  }
-}
-{
-  "name": "Egypt",
-  "fullName": "Arab Republic of Egypt",
-  "code": "EG",
-  "coordinates": {
-    "centroid": {
-      "lat": 27,
-      "lon": 30
-    }
-  }
-}
-{
-  "name": "Western Sahara",
-  "fullName": "Western Sahara",
-  "code": "EH",
-  "coordinates": {
-    "centroid": {
-      "lat": 25,
-      "lon": -13.5
-    }
-  }
-}
-{
-  "name": "Eritrea",
-  "fullName": "State of Eritrea",
-  "code": "ER",
-  "coordinates": {
-    "centroid": {
-      "lat": 15,
-      "lon": 39
-    }
-  }
-}
-{
-  "name": "Spain",
-  "fullName": "Kingdom of Spain",
-  "code": "ES",
-  "coordinates": {
-    "centroid": {
-      "lat": 40,
-      "lon": -4
-    }
-  }
-}
-{
-  "name": "Ethiopia",
-  "fullName": "Federal Democratic Republic of Ethiopia",
-  "code": "ET",
-  "coordinates": {
-    "centroid": {
-      "lat": 8,
-      "lon": 38
-    }
-  }
-}
-{
-  "name": "Finland",
-  "fullName": "Republic of Finland",
-  "code": "FI",
-  "coordinates": {
-    "centroid": {
-      "lat": 64,
-      "lon": 26
-    }
-  }
-}
-{
-  "name": "Fiji",
-  "fullName": "Republic of Fiji",
-  "code": "FJ",
-  "coordinates": {
-    "centroid": {
-      "lat": -18,
-      "lon": 178
-    }
-  }
-}
-{
-  "name": "Falkland Islands",
-  "fullName": "Falkland Islands (Islas Malvinas)",
-  "code": "FK",
-  "coordinates": {
-    "centroid": {
-      "lat": -51.75,
-      "lon": -59.166667
-    }
-  }
-}
-{
-  "name": "Federated States of Micronesia",
-  "fullName": "Federated States of Micronesia",
-  "code": "FM",
-  "coordinates": {
-    "centroid": {
-      "lat": 5,
-      "lon": 152
-    }
-  }
-}
-{
-  "name": "Faroe Islands",
-  "fullName": "Faroe Islands",
-  "code": "FO",
-  "coordinates": {
-    "centroid": {
-      "lat": 62,
-      "lon": -7
-    }
-  }
-}
-{
-  "name": "France",
-  "fullName": "French Republic",
-  "code": "FR",
-  "coordinates": {
-    "centroid": {
-      "lat": 46,
-      "lon": 2
-    }
-  }
-}
-{
-  "name": "Gabon",
-  "fullName": "Gabonese Republic",
-  "code": "GA",
-  "coordinates": {
-    "centroid": {
-      "lat": -1,
-      "lon": 11.75
-    }
-  }
-}
-{
-  "name": "United Kingdom",
-  "fullName": "United Kingdom of Great Britain and Northern Ireland",
-  "code": "GB",
-  "coordinates": {
-    "centroid": {
-      "lat": 54,
-      "lon": -4
-    }
-  }
-}
-{
-  "name": "Grenada",
-  "fullName": "Grenada",
-  "code": "GD",
-  "coordinates": {
-    "centroid": {
-      "lat": 12.116667,
-      "lon": -61.666667
-    }
-  }
-}
-{
-  "name": "Georgia",
-  "fullName": "Georgia",
-  "code": "GE",
-  "coordinates": {
-    "centroid": {
-      "lat": 41.999981,
-      "lon": 43.499905
-    }
-  }
-}
-{
-  "name": "French Guiana",
-  "fullName": "Department of Guiana",
-  "code": "GF",
-  "coordinates": {
-    "centroid": {
-      "lat": 4,
-      "lon": -53
-    }
-  }
-}
-{
-  "name": "Guernsey",
-  "fullName": "Bailiwick of Guernsey",
-  "code": "GG",
-  "coordinates": {
-    "centroid": {
-      "lat": 49.583333,
-      "lon": -2.333333
-    }
-  }
-}
-{
-  "name": "Ghana",
-  "fullName": "Republic of Ghana",
-  "code": "GH",
-  "coordinates": {
-    "centroid": {
-      "lat": 8,
-      "lon": -2
-    }
-  }
-}
-{
-  "name": "Gibraltar",
-  "fullName": "Gibraltar",
-  "code": "GI",
-  "coordinates": {
-    "centroid": {
-      "lat": 36.133333,
-      "lon": -5.35
-    }
-  }
-}
-{
-  "name": "Greenland",
-  "fullName": "Greenland",
-  "code": "GL",
-  "coordinates": {
-    "centroid": {
-      "lat": 72,
-      "lon": -40
-    }
-  }
-}
-{
-  "name": "Gambia",
-  "fullName": "Republic of The Gambia",
-  "code": "GM",
-  "coordinates": {
-    "centroid": {
-      "lat": 13.5,
-      "lon": -15.5
-    }
-  }
-}
-{
-  "name": "Guinea",
-  "fullName": "Republic of Guinea",
-  "code": "GN",
-  "coordinates": {
-    "centroid": {
-      "lat": 11,
-      "lon": -10
-    }
-  }
-}
-{
-  "name": "Guadeloupe",
-  "fullName": "Department of Guadeloupe",
-  "code": "GP",
-  "coordinates": {
-    "centroid": {
-      "lat": 16.25,
-      "lon": -61.583333
-    }
-  }
-}
-{
-  "name": "Equatorial Guinea",
-  "fullName": "Republic of Equatorial Guinea",
-  "code": "GQ",
-  "coordinates": {
-    "centroid": {
-      "lat": 2,
-      "lon": 10
-    }
-  }
-}
-{
-  "name": "Greece",
-  "fullName": "Hellenic Republic",
-  "code": "GR",
-  "coordinates": {
-    "centroid": {
-      "lat": 39,
-      "lon": 22
-    }
-  }
-}
-{
-  "name": "South Georgia and South Sandwich Islands",
-  "fullName": "South Georgia and the South Sandwich Islands",
-  "code": "GS",
-  "coordinates": {
-    "centroid": {
-      "lat": -56,
-      "lon": -33
-    }
-  }
-}
-{
-  "name": "Guatemala",
-  "fullName": "Republic of Guatemala",
-  "code": "GT",
-  "coordinates": {
-    "centroid": {
-      "lat": 15.5,
-      "lon": -90.25
-    }
-  }
-}
-{
-  "name": "Guam",
-  "fullName": "Territory of Guam",
-  "code": "GU",
-  "coordinates": {
-    "centroid": {
-      "lat": 13.4444444,
-      "lon": 144.7366667
-    }
-  }
-}
-{
-  "name": "Guinea-Bissau",
-  "fullName": "Republic of Guinea-Bissau",
-  "code": "GW",
-  "coordinates": {
-    "centroid": {
-      "lat": 12,
-      "lon": -15
-    }
-  }
-}
-{
-  "name": "Guyana",
-  "fullName": "Co-operative Republic of Guyana",
-  "code": "GY",
-  "coordinates": {
-    "centroid": {
-      "lat": 5,
-      "lon": -59
-    }
-  }
-}
-{
-  "name": "Hong Kong",
-  "fullName": "Hong Kong Special Administrative Region",
-  "code": "HK",
-  "coordinates": {
-    "centroid": {
-      "lat": 22.25,
-      "lon": 114.166667
-    }
-  }
-}
-{
-  "name": "Heard Island and McDonald Islands",
-  "fullName": "Territory of Heard Island and McDonald Islands",
-  "code": "HM",
-  "coordinates": {
-    "centroid": {
-      "lat": -53,
-      "lon": 73
-    }
-  }
-}
-{
-  "name": "Honduras",
-  "fullName": "Republic of Honduras",
-  "code": "HN",
-  "coordinates": {
-    "centroid": {
-      "lat": 15,
-      "lon": -86.5
-    }
-  }
-}
-{
-  "name": "Croatia",
-  "fullName": "Republic of Croatia",
-  "code": "HR",
-  "coordinates": {
-    "centroid": {
-      "lat": 45.166667,
-      "lon": 15.5
-    }
-  }
-}
-{
-  "name": "Haiti",
-  "fullName": "Republic of Haiti",
-  "code": "HT",
-  "coordinates": {
-    "centroid": {
-      "lat": 19,
-      "lon": -72.416667
-    }
-  }
-}
-{
-  "name": "Hungary",
-  "fullName": "Republic of Hungary",
-  "code": "HU",
-  "coordinates": {
-    "centroid": {
-      "lat": 47,
-      "lon": 20
-    }
-  }
-}
-{
-  "name": "Indonesia",
-  "fullName": "Republic of Indonesia",
-  "code": "ID",
-  "coordinates": {
-    "centroid": {
-      "lat": -5,
-      "lon": 120
-    }
-  }
-}
-{
-  "name": "Ireland",
-  "fullName": "Ireland",
-  "code": "IE",
-  "coordinates": {
-    "centroid": {
-      "lat": 53,
-      "lon": -8
-    }
-  }
-}
-{
-  "name": "Israel",
-  "fullName": "State of Israel",
-  "code": "IL",
-  "coordinates": {
-    "centroid": {
-      "lat": 31.5,
-      "lon": 34.75
-    }
-  }
-}
-{
-  "name": "Isle of Man",
-  "fullName": "Isle of Man",
-  "code": "IM",
-  "coordinates": {
-    "centroid": {
-      "lat": 54.25,
-      "lon": -4.5
-    }
-  }
-}
-{
-  "name": "India",
-  "fullName": "Republic of India",
-  "code": "IN",
-  "coordinates": {
-    "centroid": {
-      "lat": 20,
-      "lon": 77
-    }
-  }
-}
-{
-  "name": "British Indian Ocean Territory",
-  "fullName": "British Indian Ocean Territory",
-  "code": "IO",
-  "coordinates": {
-    "centroid": {
-      "lat": -6,
-      "lon": 72
-    }
-  }
-}
-{
-  "name": "Iraq",
-  "fullName": "Republic of Iraq",
-  "code": "IQ",
-  "coordinates": {
-    "centroid": {
-      "lat": 33,
-      "lon": 44
-    }
-  }
-}
-{
-  "name": "Iran",
-  "fullName": "Islamic Republic of Iran",
-  "code": "IR",
-  "coordinates": {
-    "centroid": {
-      "lat": 32,
-      "lon": 53
-    }
-  }
-}
-{
-  "name": "Iceland",
-  "fullName": "Republic of Iceland",
-  "code": "IS",
-  "coordinates": {
-    "centroid": {
-      "lat": 65,
-      "lon": -18
-    }
-  }
-}
-{
-  "name": "Italy",
-  "fullName": "Italian Republic",
-  "code": "IT",
-  "coordinates": {
-    "centroid": {
-      "lat": 42.833333,
-      "lon": 12.833333
-    }
-  }
-}
-{
-  "name": "Jersey",
-  "fullName": "Bailiwick of Jersey",
-  "code": "JE",
-  "coordinates": {
-    "centroid": {
-      "lat": 49.216667,
-      "lon": -2.116667
-    }
-  }
-}
-{
-  "name": "Jamaica",
-  "fullName": "Jamaica",
-  "code": "JM",
-  "coordinates": {
-    "centroid": {
-      "lat": 18.25,
-      "lon": -77.5
-    }
-  }
-}
-{
-  "name": "Jordan",
-  "fullName": "Hashemite Kingdom of Jordan",
-  "code": "JO",
-  "coordinates": {
-    "centroid": {
-      "lat": 31,
-      "lon": 36
-    }
-  }
-}
-{
-  "name": "Japan",
-  "fullName": "Japan",
-  "code": "JP",
-  "coordinates": {
-    "centroid": {
-      "lat": 36,
-      "lon": 138
-    }
-  }
-}
-{
-  "name": "Kenya",
-  "fullName": "Republic of Kenya",
-  "code": "KE",
-  "coordinates": {
-    "centroid": {
-      "lat": 1,
-      "lon": 38
-    }
-  }
-}
-{
-  "name": "Kyrgyzstan",
-  "fullName": "Kyrgyz Republic",
-  "code": "KG",
-  "coordinates": {
-    "centroid": {
-      "lat": 41,
-      "lon": 75
-    }
-  }
-}
-{
-  "name": "Cambodia",
-  "fullName": "Kingdom of Cambodia",
-  "code": "KH",
-  "coordinates": {
-    "centroid": {
-      "lat": 13,
-      "lon": 105
-    }
-  }
-}
-{
-  "name": "Kiribati",
-  "fullName": "Republic of Kiribati",
-  "code": "KI",
-  "coordinates": {
-    "centroid": {
-      "lat": -5,
-      "lon": -170
-    }
-  }
-}
-{
-  "name": "Comoros",
-  "fullName": "Union of the Comoros",
-  "code": "KM",
-  "coordinates": {
-    "centroid": {
-      "lat": -12.166667,
-      "lon": 44.25
-    }
-  }
-}
-{
-  "name": "Saint Kitts and Nevis",
-  "fullName": "Federation of Saint Kitts and Nevis",
-  "code": "KN",
-  "coordinates": {
-    "centroid": {
-      "lat": 17.333333,
-      "lon": -62.75
-    }
-  }
-}
-{
-  "name": "North Korea",
-  "fullName": "Democratic People's Republic of Korea",
-  "code": "KP",
-  "coordinates": {
-    "centroid": {
-      "lat": 40,
-      "lon": 127
-    }
-  }
-}
-{
-  "name": "South Korea",
-  "fullName": "Republic of Korea",
-  "code": "KR",
-  "coordinates": {
-    "centroid": {
-      "lat": 37,
-      "lon": 127.5
-    }
-  }
-}
-{
-  "name": "Kuwait",
-  "fullName": "State of Kuwait",
-  "code": "KW",
-  "coordinates": {
-    "centroid": {
-      "lat": 29.5,
-      "lon": 47.75
-    }
-  }
-}
-{
-  "name": "Cayman Islands",
-  "fullName": "Cayman Islands",
-  "code": "KY",
-  "coordinates": {
-    "centroid": {
-      "lat": 19.5,
-      "lon": -80.666667
-    }
-  }
-}
-{
-  "name": "Kazakhstan",
-  "fullName": "Republic of Kazakhstan",
-  "code": "KZ",
-  "coordinates": {
-    "centroid": {
-      "lat": 48,
-      "lon": 68
-    }
-  }
-}
-{
-  "name": "Laos",
-  "fullName": "Lao People's Democratic Republic",
-  "code": "LA",
-  "coordinates": {
-    "centroid": {
-      "lat": 18,
-      "lon": 105
-    }
-  }
-}
-{
-  "name": "Lebanon",
-  "fullName": "Republic of Lebanon",
-  "code": "LB",
-  "coordinates": {
-    "centroid": {
-      "lat": 33.833333,
-      "lon": 35.833333
-    }
-  }
-}
-{
-  "name": "Saint Lucia",
-  "fullName": "Saint Lucia",
-  "code": "LC",
-  "coordinates": {
-    "centroid": {
-      "lat": 13.883333,
-      "lon": -60.966667
-    }
-  }
-}
-{
-  "name": "Liechtenstein",
-  "fullName": "Principality of Liechtenstein",
-  "code": "LI",
-  "coordinates": {
-    "centroid": {
-      "lat": 47.166667,
-      "lon": 9.533333
-    }
-  }
-}
-{
-  "name": "Sri Lanka",
-  "fullName": "Democratic Socialist Republic of Sri Lanka",
-  "code": "LK",
-  "coordinates": {
-    "centroid": {
-      "lat": 7,
-      "lon": 81
-    }
-  }
-}
-{
-  "name": "Liberia",
-  "fullName": "Republic of Liberia",
-  "code": "LR",
-  "coordinates": {
-    "centroid": {
-      "lat": 6.5,
-      "lon": -9.5
-    }
-  }
-}
-{
-  "name": "Lesotho",
-  "fullName": "Kingdom of Lesotho",
-  "code": "LS",
-  "coordinates": {
-    "centroid": {
-      "lat": -29.5,
-      "lon": 28.25
-    }
-  }
-}
-{
-  "name": "Lithuania",
-  "fullName": "Republic of Lithuania",
-  "code": "LT",
-  "coordinates": {
-    "centroid": {
-      "lat": 56,
-      "lon": 24
-    }
-  }
-}
-{
-  "name": "Luxembourg",
-  "fullName": "Grand Duchy of Luxembourg",
-  "code": "LU",
-  "coordinates": {
-    "centroid": {
-      "lat": 49.75,
-      "lon": 6.166667
-    }
-  }
-}
-{
-  "name": "Latvia",
-  "fullName": "Republic of Latvia",
-  "code": "LV",
-  "coordinates": {
-    "centroid": {
-      "lat": 57,
-      "lon": 25
-    }
-  }
-}
-{
-  "name": "Libya",
-  "fullName": "Libya",
-  "code": "LY",
-  "coordinates": {
-    "centroid": {
-      "lat": 25,
-      "lon": 17
-    }
-  }
-}
-{
-  "name": "Morocco",
-  "fullName": "Kingdom of Morocco",
-  "code": "MA",
-  "coordinates": {
-    "centroid": {
-      "lat": 32,
-      "lon": -5
-    }
-  }
-}
-{
-  "name": "Monaco",
-  "fullName": "Principality of Monaco",
-  "code": "MC",
-  "coordinates": {
-    "centroid": {
-      "lat": 43.733333,
-      "lon": 7.4
-    }
-  }
-}
-{
-  "name": "Moldova",
-  "fullName": "Republic of Moldova",
-  "code": "MD",
-  "coordinates": {
-    "centroid": {
-      "lat": 47,
-      "lon": 29
-    }
-  }
-}
-{
-  "name": "Montenegro",
-  "fullName": "Montenegro",
-  "code": "ME",
-  "coordinates": {
-    "centroid": {
-      "lat": 42.5,
-      "lon": 19.3
-    }
-  }
-}
-{
-  "name": "Saint Martin",
-  "fullName": "Saint Martin",
-  "code": "MF",
-  "coordinates": {
-    "centroid": {
-      "lat": 18.075,
-      "lon": -63.05833
-    }
-  }
-}
-{
-  "name": "Madagascar",
-  "fullName": "Republic of Madagascar",
-  "code": "MG",
-  "coordinates": {
-    "centroid": {
-      "lat": -20,
-      "lon": 47
-    }
-  }
-}
-{
-  "name": "Marshall Islands",
-  "fullName": "Republic of the Marshall Islands",
-  "code": "MH",
-  "coordinates": {
-    "centroid": {
-      "lat": 10,
-      "lon": 167
-    }
-  }
-}
-{
-  "name": "Macedonia",
-  "fullName": "Republic of Macedonia",
-  "code": "MK",
-  "coordinates": {
-    "centroid": {
-      "lat": 41.833333,
-      "lon": 22
-    }
-  }
-}
-{
-  "name": "Mali",
-  "fullName": "Republic of Mali",
-  "code": "ML",
-  "coordinates": {
-    "centroid": {
-      "lat": 17,
-      "lon": -4
-    }
-  }
-}
-{
-  "name": "Burma",
-  "fullName": "Union of Burma",
-  "code": "MM",
-  "coordinates": {
-    "centroid": {
-      "lat": 22,
-      "lon": 98
-    }
-  }
-}
-{
-  "name": "Mongolia",
-  "fullName": "Mongolia",
-  "code": "MN",
-  "coordinates": {
-    "centroid": {
-      "lat": 46,
-      "lon": 105
-    }
-  }
-}
-{
-  "name": "Macau",
-  "fullName": "Macau Special Administrative Region",
-  "code": "MO",
-  "coordinates": {
-    "centroid": {
-      "lat": 22.157778,
-      "lon": 113.559722
-    }
-  }
-}
-{
-  "name": "Northern Mariana Islands",
-  "fullName": "Commonwealth of the Northern Mariana Islands",
-  "code": "MP",
-  "coordinates": {
-    "centroid": {
-      "lat": 16,
-      "lon": 146
-    }
-  }
-}
-{
-  "name": "Martinique",
-  "fullName": "Department of Martinique",
-  "code": "MQ",
-  "coordinates": {
-    "centroid": {
-      "lat": 14.666667,
-      "lon": -61
-    }
-  }
-}
-{
-  "name": "Mauritania",
-  "fullName": "Islamic Republic of Mauritania",
-  "code": "MR",
-  "coordinates": {
-    "centroid": {
-      "lat": 20,
-      "lon": -12
-    }
-  }
-}
-{
-  "name": "Montserrat",
-  "fullName": "Montserrat",
-  "code": "MS",
-  "coordinates": {
-    "centroid": {
-      "lat": 16.75,
-      "lon": -62.2
-    }
-  }
-}
-{
-  "name": "Malta",
-  "fullName": "Republic of Malta",
-  "code": "MT",
-  "coordinates": {
-    "centroid": {
-      "lat": 35.916667,
-      "lon": 14.433333
-    }
-  }
-}
-{
-  "name": "Mauritius",
-  "fullName": "Republic of Mauritius",
-  "code": "MU",
-  "coordinates": {
-    "centroid": {
-      "lat": -20.3,
-      "lon": 57.583333
-    }
-  }
-}
-{
-  "name": "Maldives",
-  "fullName": "Republic of Maldives",
-  "code": "MV",
-  "coordinates": {
-    "centroid": {
-      "lat": 3.2,
-      "lon": 73
-    }
-  }
-}
-{
-  "name": "Malawi",
-  "fullName": "Republic of Malawi",
-  "code": "MW",
-  "coordinates": {
-    "centroid": {
-      "lat": -13.5,
-      "lon": 34
-    }
-  }
-}
-{
-  "name": "Mexico",
-  "fullName": "United Mexican States",
-  "code": "MX",
-  "coordinates": {
-    "centroid": {
-      "lat": 23,
-      "lon": -102
-    }
-  }
-}
-{
-  "name": "Malaysia",
-  "fullName": "Malaysia",
-  "code": "MY",
-  "coordinates": {
-    "centroid": {
-      "lat": 2.5,
-      "lon": 112.5
-    }
-  }
-}
-{
-  "name": "Mozambique",
-  "fullName": "Republic of Mozambique",
-  "code": "MZ",
-  "coordinates": {
-    "centroid": {
-      "lat": -18.25,
-      "lon": 35
-    }
-  }
-}
-{
-  "name": "Namibia",
-  "fullName": "Republic of Namibia",
-  "code": "NA",
-  "coordinates": {
-    "centroid": {
-      "lat": -22,
-      "lon": 17
-    }
-  }
-}
-{
-  "name": "New Caledonia",
-  "fullName": "New Caledonia",
-  "code": "NC",
-  "coordinates": {
-    "centroid": {
-      "lat": -21.5,
-      "lon": 165.5
-    }
-  }
-}
-{
-  "name": "Niger",
-  "fullName": "Republic of Niger",
-  "code": "NE",
-  "coordinates": {
-    "centroid": {
-      "lat": 16,
-      "lon": 8
-    }
-  }
-}
-{
-  "name": "Norfolk Island",
-  "fullName": "Territory of Norfolk Island",
-  "code": "NF",
-  "coordinates": {
-    "centroid": {
-      "lat": -29.033333,
-      "lon": 167.95
-    }
-  }
-}
-{
-  "name": "Nigeria",
-  "fullName": "Federal Republic of Nigeria",
-  "code": "NG",
-  "coordinates": {
-    "centroid": {
-      "lat": 10,
-      "lon": 8
-    }
-  }
-}
-{
-  "name": "Nicaragua",
-  "fullName": "Republic of Nicaragua",
-  "code": "NI",
-  "coordinates": {
-    "centroid": {
-      "lat": 13,
-      "lon": -85
-    }
-  }
-}
-{
-  "name": "Netherlands",
-  "fullName": "Kingdom of the Netherlands",
-  "code": "NL",
-  "coordinates": {
-    "centroid": {
-      "lat": 52.5,
-      "lon": 5.75
-    }
-  }
-}
-{
-  "name": "Norway",
-  "fullName": "Kingdom of Norway",
-  "code": "NO",
-  "coordinates": {
-    "centroid": {
-      "lat": 62,
-      "lon": 10
-    }
-  }
-}
-{
-  "name": "Nepal",
-  "fullName": "Federal Democratic Republic of Nepal",
-  "code": "NP",
-  "coordinates": {
-    "centroid": {
-      "lat": 28,
-      "lon": 84
-    }
-  }
-}
-{
-  "name": "Nauru",
-  "fullName": "Republic of Nauru",
-  "code": "NR",
-  "coordinates": {
-    "centroid": {
-      "lat": -0.533333,
-      "lon": 166.916667
-    }
-  }
-}
-{
-  "name": "Niue",
-  "fullName": "Niue",
-  "code": "NU",
-  "coordinates": {
-    "centroid": {
-      "lat": -19.033333,
-      "lon": -169.866667
-    }
-  }
-}
-{
-  "name": "New Zealand",
-  "fullName": "New Zealand",
-  "code": "NZ",
-  "coordinates": {
-    "centroid": {
-      "lat": -42,
-      "lon": 174
-    }
-  }
-}
-{
-  "name": "Oman",
-  "fullName": "Sultanate of Oman",
-  "code": "OM",
-  "coordinates": {
-    "centroid": {
-      "lat": 21,
-      "lon": 57
-    }
-  }
-}
-{
-  "name": "Panama",
-  "fullName": "Republic of Panama",
-  "code": "PA",
-  "coordinates": {
-    "centroid": {
-      "lat": 9,
-      "lon": -80
-    }
-  }
-}
-{
-  "name": "Peru",
-  "fullName": "Republic of Peru",
-  "code": "PE",
-  "coordinates": {
-    "centroid": {
-      "lat": -10,
-      "lon": -76
-    }
-  }
-}
-{
-  "name": "French Polynesia",
-  "fullName": "French Polynesia",
-  "code": "PF",
-  "coordinates": {
-    "centroid": {
-      "lat": -15,
-      "lon": -140
-    }
-  }
-}
-{
-  "name": "Papua New Guinea",
-  "fullName": "Independent State of Papua New Guinea",
-  "code": "PG",
-  "coordinates": {
-    "centroid": {
-      "lat": -6,
-      "lon": 147
-    }
-  }
-}
-{
-  "name": "Philippines",
-  "fullName": "Republic of the Philippines",
-  "code": "PH",
-  "coordinates": {
-    "centroid": {
-      "lat": 13,
-      "lon": 122
-    }
-  }
-}
-{
-  "name": "Pakistan",
-  "fullName": "Islamic Republic of Pakistan",
-  "code": "PK",
-  "coordinates": {
-    "centroid": {
-      "lat": 30,
-      "lon": 70
-    }
-  }
-}
-{
-  "name": "Poland",
-  "fullName": "Republic of Poland",
-  "code": "PL",
-  "coordinates": {
-    "centroid": {
-      "lat": 52,
-      "lon": 20
-    }
-  }
-}
-{
-  "name": "Saint Pierre and Miquelon",
-  "fullName": "Territorial Collectivity of Saint Pierre and Miquelon",
-  "code": "PM",
-  "coordinates": {
-    "centroid": {
-      "lat": 46.833333,
-      "lon": -56.333333
-    }
-  }
-}
-{
-  "name": "Pitcairn Islands",
-  "fullName": "Henderson Ducie and Oeno Islands Pitcairn",
-  "code": "PN",
-  "coordinates": {
-    "centroid": {
-      "lat": -25.066667,
-      "lon": -130.1
-    }
-  }
-}
-{
-  "name": "Puerto Rico",
-  "fullName": "Commonwealth of Puerto Rico",
-  "code": "PR",
-  "coordinates": {
-    "centroid": {
-      "lat": 18.2482882,
-      "lon": -66.4998941
-    }
-  }
-}
-{
-  "name": "West Bank",
-  "fullName": "West Bank",
-  "code": "PS",
-  "coordinates": {
-    "centroid": {
-      "lat": 31.666667,
-      "lon": 35.25
-    }
-  }
-}
-{
-  "name": "Portugal",
-  "fullName": "Portuguese Republic",
-  "code": "PT",
-  "coordinates": {
-    "centroid": {
-      "lat": 39.5,
-      "lon": -8
-    }
-  }
-}
-{
-  "name": "Palau",
-  "fullName": "Republic of Palau",
-  "code": "PW",
-  "coordinates": {
-    "centroid": {
-      "lat": 6,
-      "lon": 134
-    }
-  }
-}
-{
-  "name": "Paraguay",
-  "fullName": "Republic of Paraguay",
-  "code": "PY",
-  "coordinates": {
-    "centroid": {
-      "lat": -22.993333,
-      "lon": -57.996389
-    }
-  }
-}
-{
-  "name": "Qatar",
-  "fullName": "State of Qatar",
-  "code": "QA",
-  "coordinates": {
-    "centroid": {
-      "lat": 25.5,
-      "lon": 51.25
-    }
-  }
-}
-{
-  "name": "Reunion",
-  "fullName": "Department of Reunion",
-  "code": "RE",
-  "coordinates": {
-    "centroid": {
-      "lat": -21.1,
-      "lon": 55.6
-    }
-  }
-}
-{
-  "name": "Romania",
-  "fullName": "Romania",
-  "code": "RO",
-  "coordinates": {
-    "centroid": {
-      "lat": 46,
-      "lon": 25
-    }
-  }
-}
-{
-  "name": "Serbia",
-  "fullName": "Republic of Serbia",
-  "code": "RS",
-  "coordinates": {
-    "centroid": {
-      "lat": 44,
-      "lon": 21
-    }
-  }
-}
-{
-  "name": "Russia",
-  "fullName": "Russian Federation",
-  "code": "RU",
-  "coordinates": {
-    "centroid": {
-      "lat": 60,
-      "lon": 100
-    }
-  }
-}
-{
-  "name": "Rwanda",
-  "fullName": "Republic of Rwanda",
-  "code": "RW",
-  "coordinates": {
-    "centroid": {
-      "lat": -2,
-      "lon": 30
-    }
-  }
-}
-{
-  "name": "Saudi Arabia",
-  "fullName": "Kingdom of Saudi Arabia",
-  "code": "SA",
-  "coordinates": {
-    "centroid": {
-      "lat": 25,
-      "lon": 45
-    }
-  }
-}
-{
-  "name": "Solomon Islands",
-  "fullName": "Solomon Islands",
-  "code": "SB",
-  "coordinates": {
-    "centroid": {
-      "lat": -8,
-      "lon": 159
-    }
-  }
-}
-{
-  "name": "Seychelles",
-  "fullName": "Republic of Seychelles",
-  "code": "SC",
-  "coordinates": {
-    "centroid": {
-      "lat": -4.583333,
-      "lon": 55.666667
-    }
-  }
-}
-{
-  "name": "Sudan",
-  "fullName": "Republic of the Sudan",
-  "code": "SD",
-  "coordinates": {
-    "centroid": {
-      "lat": 16,
-      "lon": 30
-    }
-  }
-}
-{
-  "name": "Sweden",
-  "fullName": "Kingdom of Sweden",
-  "code": "SE",
-  "coordinates": {
-    "centroid": {
-      "lat": 62,
-      "lon": 15
-    }
-  }
-}
-{
-  "name": "Singapore",
-  "fullName": "Republic of Singapore",
-  "code": "SG",
-  "coordinates": {
-    "centroid": {
-      "lat": 1.366667,
-      "lon": 103.8
-    }
-  }
-}
-{
-  "name": "Ascension",
-  "fullName": "Ascension and Tristan da Cunha Saint Helena",
-  "code": "SH",
-  "coordinates": {
-    "centroid": {
-      "lat": -15.95,
-      "lon": -5.7
-    }
-  }
-}
-{
-  "name": "Slovenia",
-  "fullName": "Republic of Slovenia",
-  "code": "SI",
-  "coordinates": {
-    "centroid": {
-      "lat": 46.25,
-      "lon": 15.166667
-    }
-  }
-}
-{
-  "name": "Svalbard",
-  "fullName": "Svalbard and Jan Mayen",
-  "code": "SJ",
-  "coordinates": {
-    "centroid": {
-      "lat": 78,
-      "lon": 20
-    }
-  }
-}
-{
-  "name": "Slovakia",
-  "fullName": "Slovak Republic",
-  "code": "SK",
-  "coordinates": {
-    "centroid": {
-      "lat": 48.666667,
-      "lon": 19.5
-    }
-  }
-}
-{
-  "name": "Sierra Leone",
-  "fullName": "Republic of Sierra Leone",
-  "code": "SL",
-  "coordinates": {
-    "centroid": {
-      "lat": 8.5,
-      "lon": -11.5
-    }
-  }
-}
-{
-  "name": "San Marino",
-  "fullName": "Republic of San Marino",
-  "code": "SM",
-  "coordinates": {
-    "centroid": {
-      "lat": 43.933333,
-      "lon": 12.416667
-    }
-  }
-}
-{
-  "name": "Senegal",
-  "fullName": "Republic of Senegal",
-  "code": "SN",
-  "coordinates": {
-    "centroid": {
-      "lat": 14,
-      "lon": -14
-    }
-  }
-}
-{
-  "name": "Somalia",
-  "fullName": "Somalia",
-  "code": "SO",
-  "coordinates": {
-    "centroid": {
-      "lat": 6,
-      "lon": 48
-    }
-  }
-}
-{
-  "name": "Suriname",
-  "fullName": "Republic of Suriname",
-  "code": "SR",
-  "coordinates": {
-    "centroid": {
-      "lat": 4,
-      "lon": -56
-    }
-  }
-}
-{
-  "name": "South Sudan",
-  "fullName": "Republic of South Sudan",
-  "code": "SS",
-  "coordinates": {
-    "centroid": {
-      "lat": 8,
-      "lon": 30
-    }
-  }
-}
-{
-  "name": "Sao Tome and Principe",
-  "fullName": "Democratic Republic of Sao Tome and Principe",
-  "code": "ST",
-  "coordinates": {
-    "centroid": {
-      "lat": 1,
-      "lon": 7
-    }
-  }
-}
-{
-  "name": "El Salvador",
-  "fullName": "Republic of El Salvador",
-  "code": "SV",
-  "coordinates": {
-    "centroid": {
-      "lat": 13.833333,
-      "lon": -88.916667
-    }
-  }
-}
-{
-  "name": "Sint Maarten",
-  "fullName": "Land Sint Maarten",
-  "code": "SX",
-  "coordinates": {
-    "centroid": {
-      "lat": 18.04167,
-      "lon": -63.06667
-    }
-  }
-}
-{
-  "name": "Syria",
-  "fullName": "Syrian Arab Republic",
-  "code": "SY",
-  "coordinates": {
-    "centroid": {
-      "lat": 35,
-      "lon": 38
-    }
-  }
-}
-{
-  "name": "Swaziland",
-  "fullName": "Kingdom of Swaziland",
-  "code": "SZ",
-  "coordinates": {
-    "centroid": {
-      "lat": -26.5,
-      "lon": 31.5
-    }
-  }
-}
-{
-  "name": "Turks and Caicos Islands",
-  "fullName": "Turks and Caicos Islands",
-  "code": "TC",
-  "coordinates": {
-    "centroid": {
-      "lat": 21.733333,
-      "lon": -71.583333
-    }
-  }
-}
-{
-  "name": "Chad",
-  "fullName": "Republic of Chad",
-  "code": "TD",
-  "coordinates": {
-    "centroid": {
-      "lat": 15,
-      "lon": 19
-    }
-  }
-}
-{
-  "name": "French Southern and Antarctic Lands",
-  "fullName": "French Southern and Antarctic Lands",
-  "code": "TF",
-  "coordinates": {
-    "centroid": {
-      "lat": -43,
-      "lon": 67
-    }
-  }
-}
-{
-  "name": "Togo",
-  "fullName": "Togolese Republic",
-  "code": "TG",
-  "coordinates": {
-    "centroid": {
-      "lat": 8,
-      "lon": 1.166667
-    }
-  }
-}
-{
-  "name": "Thailand",
-  "fullName": "Kingdom of Thailand",
-  "code": "TH",
-  "coordinates": {
-    "centroid": {
-      "lat": 15,
-      "lon": 100
-    }
-  }
-}
-{
-  "name": "Tajikistan",
-  "fullName": "Republic of Tajikistan",
-  "code": "TJ",
-  "coordinates": {
-    "centroid": {
-      "lat": 39,
-      "lon": 71
-    }
-  }
-}
-{
-  "name": "Tokelau",
-  "fullName": "Tokelau",
-  "code": "TK",
-  "coordinates": {
-    "centroid": {
-      "lat": -9,
-      "lon": -171.75
-    }
-  }
-}
-{
-  "name": "Timor-Leste",
-  "fullName": "Democratic Republic of Timor-Leste",
-  "code": "TL",
-  "coordinates": {
-    "centroid": {
-      "lat": -8.833333,
-      "lon": 125.75
-    }
-  }
-}
-{
-  "name": "Turkmenistan",
-  "fullName": "Turkmenistan",
-  "code": "TM",
-  "coordinates": {
-    "centroid": {
-      "lat": 40,
-      "lon": 60
-    }
-  }
-}
-{
-  "name": "Tunisia",
-  "fullName": "Tunisian Republic",
-  "code": "TN",
-  "coordinates": {
-    "centroid": {
-      "lat": 34,
-      "lon": 9
-    }
-  }
-}
-{
-  "name": "Tonga",
-  "fullName": "Kingdom of Tonga",
-  "code": "TO",
-  "coordinates": {
-    "centroid": {
-      "lat": -20,
-      "lon": -175
-    }
-  }
-}
-{
-  "name": "Turkey",
-  "fullName": "Republic of Turkey",
-  "code": "TR",
-  "coordinates": {
-    "centroid": {
-      "lat": 39.059012,
-      "lon": 34.911546
-    }
-  }
-}
-{
-  "name": "Trinidad and Tobago",
-  "fullName": "Republic of Trinidad and Tobago",
-  "code": "TT",
-  "coordinates": {
-    "centroid": {
-      "lat": 11,
-      "lon": -61
-    }
-  }
-}
-{
-  "name": "Tuvalu",
-  "fullName": "Tuvalu",
-  "code": "TV",
-  "coordinates": {
-    "centroid": {
-      "lat": -8,
-      "lon": 178
-    }
-  }
-}
-{
-  "name": "Taiwan",
-  "fullName": "Taiwan Province of China",
-  "code": "TW",
-  "coordinates": {
-    "centroid": {
-      "lat": 24,
-      "lon": 121
-    }
-  }
-}
-{
-  "name": "Tanzania",
-  "fullName": "United Republic of Tanzania",
-  "code": "TZ",
-  "coordinates": {
-    "centroid": {
-      "lat": -6,
-      "lon": 35
-    }
-  }
-}
-{
-  "name": "Ukraine",
-  "fullName": "Ukraine",
-  "code": "UA",
-  "coordinates": {
-    "centroid": {
-      "lat": 49,
-      "lon": 32
-    }
-  }
-}
-{
-  "name": "Uganda",
-  "fullName": "Republic of Uganda",
-  "code": "UG",
-  "coordinates": {
-    "centroid": {
-      "lat": 2,
-      "lon": 33
-    }
-  }
-}
-{
-  "name": "US Minor Outlying Islands",
-  "fullName": "United States Minor Outlying Islands",
-  "code": "UM",
-  "coordinates": {
-    "centroid": {
-      "lat": 5.8811111,
-      "lon": -162.0725
-    }
-  }
-}
-{
-  "name": "United States",
-  "fullName": "United States of America",
-  "code": "US",
-  "coordinates": {
-    "centroid": {
-      "lat": 39.828175,
-      "lon": -98.5795
-    }
-  }
-}
-{
-  "name": "Uruguay",
-  "fullName": "Oriental Republic of Uruguay",
-  "code": "UY",
-  "coordinates": {
-    "centroid": {
-      "lat": -33,
-      "lon": -56
-    }
-  }
-}
-{
-  "name": "Uzbekistan",
-  "fullName": "Republic of Uzbekistan",
-  "code": "UZ",
-  "coordinates": {
-    "centroid": {
-      "lat": 41.707542,
-      "lon": 63.84911
-    }
-  }
-}
-{
-  "name": "Vatican City",
-  "fullName": "State of the Vatican City",
-  "code": "VA",
-  "coordinates": {
-    "centroid": {
-      "lat": 41.9,
-      "lon": 12.45
-    }
-  }
-}
-{
-  "name": "Saint Vincent and the Grenadines",
-  "fullName": "Saint Vincent and the Grenadines",
-  "code": "VC",
-  "coordinates": {
-    "centroid": {
-      "lat": 13.083333,
-      "lon": -61.2
-    }
-  }
-}
-{
-  "name": "Venezuela",
-  "fullName": "Bolivarian Republic of Venezuela",
-  "code": "VE",
-  "coordinates": {
-    "centroid": {
-      "lat": 8,
-      "lon": -66
-    }
-  }
-}
-{
-  "name": "British Virgin Islands",
-  "fullName": "British Virgin Islands",
-  "code": "VG",
-  "coordinates": {
-    "centroid": {
-      "lat": 18.5,
-      "lon": -64.5
-    }
-  }
-}
-{
-  "name": "US Virgin Islands",
-  "fullName": "United States Virgin Islands",
-  "code": "VI",
-  "coordinates": {
-    "centroid": {
-      "lat": 18.3482891,
-      "lon": -64.9834807
-    }
-  }
-}
-{
-  "name": "Vietnam",
-  "fullName": "Socialist Republic of Vietnam",
-  "code": "VN",
-  "coordinates": {
-    "centroid": {
-      "lat": 16.166667,
-      "lon": 107.833333
-    }
-  }
-}
-{
-  "name": "Vanuatu",
-  "fullName": "Republic of Vanuatu",
-  "code": "VU",
-  "coordinates": {
-    "centroid": {
-      "lat": -16,
-      "lon": 167
-    }
-  }
-}
-{
-  "name": "Wallis and Futuna",
-  "fullName": "Wallis and Futuna",
-  "code": "WF",
-  "coordinates": {
-    "centroid": {
-      "lat": -13.3,
-      "lon": -176.2
-    }
-  }
-}
-{
-  "name": "Samoa",
-  "fullName": "Independent State of Samoa",
-  "code": "WS",
-  "coordinates": {
-    "centroid": {
-      "lat": -13.803096,
-      "lon": -172.178309
-    }
-  }
-}
-{
-  "name": "Yemen",
-  "fullName": "Republic of Yemen",
-  "code": "YE",
-  "coordinates": {
-    "centroid": {
-      "lat": 15.5,
-      "lon": 47.5
-    }
-  }
-}
-{
-  "name": "Mayotte",
-  "fullName": "Department of Mayotte",
-  "code": "YT",
-  "coordinates": {
-    "centroid": {
-      "lat": -12.833333,
-      "lon": 45.166667
-    }
-  }
-}
-{
-  "name": "South Africa",
-  "fullName": "South Africa",
-  "code": "ZA",
-  "coordinates": {
-    "centroid": {
-      "lat": -30,
-      "lon": 26
-    }
-  }
-}
-{
-  "name": "Zambia",
-  "fullName": "Republic of Zambia",
-  "code": "ZM",
-  "coordinates": {
-    "centroid": {
-      "lat": -15,
-      "lon": 30
-    }
-  }
-}
-{
-  "name": "Zimbabwe",
-  "fullName": "Republic of Zimbabwe",
-  "code": "ZW",
-  "coordinates": {
-    "centroid": {
-      "lat": -19,
-      "lon": 29
-    }
-  }
-}
+[
+  {
+    "name": "Andorra",
+    "fullName": "Principality of Andorra",
+    "code": "AD",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          1.5,
+          42.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "United Arab Emirates",
+    "fullName": "United Arab Emirates",
+    "code": "AE",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          54,
+          24
+        ]
+      }
+    }
+  },
+  {
+    "name": "Afghanistan",
+    "fullName": "Islamic Republic of Afghanistan",
+    "code": "AF",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          66,
+          33
+        ]
+      }
+    }
+  },
+  {
+    "name": "Antigua and Barbuda",
+    "fullName": "Antigua and Barbuda",
+    "code": "AG",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -61.8,
+          17.05
+        ]
+      }
+    }
+  },
+  {
+    "name": "Anguilla",
+    "fullName": "Anguilla",
+    "code": "AI",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -63.05,
+          18.216667
+        ]
+      }
+    }
+  },
+  {
+    "name": "Albania",
+    "fullName": "Republic of Albania",
+    "code": "AL",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          20,
+          41
+        ]
+      }
+    }
+  },
+  {
+    "name": "Armenia",
+    "fullName": "Republic of Armenia",
+    "code": "AM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          45,
+          40
+        ]
+      }
+    }
+  },
+  {
+    "name": "Angola",
+    "fullName": "Republic of Angola",
+    "code": "AO",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          18.5,
+          -12.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Argentina",
+    "fullName": "Argentine Republic",
+    "code": "AR",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -64,
+          -34
+        ]
+      }
+    }
+  },
+  {
+    "name": "American Samoa",
+    "fullName": "Territory of American Samoa",
+    "code": "AS",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -170,
+          -14.3333333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Austria",
+    "fullName": "Republic of Austria",
+    "code": "AT",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          13.333333,
+          47.333333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Australia",
+    "fullName": "Commonwealth of Australia",
+    "code": "AU",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          135,
+          -25
+        ]
+      }
+    }
+  },
+  {
+    "name": "Aruba",
+    "fullName": "Aruba",
+    "code": "AW",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -69.966667,
+          12.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Azerbaijan",
+    "fullName": "Republic of Azerbaijan",
+    "code": "AZ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          47.5,
+          40.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "fullName": "Bosnia and Herzegovina",
+    "code": "BA",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          17.833333,
+          44.25
+        ]
+      }
+    }
+  },
+  {
+    "name": "Barbados",
+    "fullName": "Barbados",
+    "code": "BB",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -59.533333,
+          13.166667
+        ]
+      }
+    }
+  },
+  {
+    "name": "Bangladesh",
+    "fullName": "People's Republic of Bangladesh",
+    "code": "BD",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          90,
+          24
+        ]
+      }
+    }
+  },
+  {
+    "name": "Belgium",
+    "fullName": "Kingdom of Belgium",
+    "code": "BE",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          4,
+          50.833333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Burkina Faso",
+    "fullName": "Burkina Faso",
+    "code": "BF",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -2,
+          13
+        ]
+      }
+    }
+  },
+  {
+    "name": "Bulgaria",
+    "fullName": "Republic of Bulgaria",
+    "code": "BG",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          25,
+          43
+        ]
+      }
+    }
+  },
+  {
+    "name": "Bahrain",
+    "fullName": "Kingdom of Bahrain",
+    "code": "BH",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          50.5,
+          26
+        ]
+      }
+    }
+  },
+  {
+    "name": "Burundi",
+    "fullName": "Republic of Burundi",
+    "code": "BI",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          30,
+          -3.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Benin",
+    "fullName": "Republic of Benin",
+    "code": "BJ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          2.25,
+          9.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Saint Barthelemy",
+    "fullName": "Saint Barthelemy",
+    "code": "BL",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -62.833333,
+          17.9
+        ]
+      }
+    }
+  },
+  {
+    "name": "Bermuda",
+    "fullName": "Bermuda",
+    "code": "BM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -64.75,
+          32.333333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Brunei",
+    "fullName": "Negara Brunei Darussalam",
+    "code": "BN",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          114.666667,
+          4.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Bolivia",
+    "fullName": "Plurinational State of Bolivia",
+    "code": "BO",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -65,
+          -17
+        ]
+      }
+    }
+  },
+  {
+    "name": "Bonaire",
+    "fullName": "Bonaire  Sint Eustatius  and Saba",
+    "code": "BQ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -68.25,
+          12.2
+        ]
+      }
+    }
+  },
+  {
+    "name": "Brazil",
+    "fullName": "Federative Republic of Brazil",
+    "code": "BR",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -55,
+          -10
+        ]
+      }
+    }
+  },
+  {
+    "name": "Bahamas",
+    "fullName": "Commonwealth of The Bahamas",
+    "code": "BS",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -76,
+          24
+        ]
+      }
+    }
+  },
+  {
+    "name": "Bhutan",
+    "fullName": "Kingdom of Bhutan",
+    "code": "BT",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          90.5,
+          27.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Bouvet Island",
+    "fullName": "Bouvet Island",
+    "code": "BV",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          3.4,
+          -54.433333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Botswana",
+    "fullName": "Republic of Botswana",
+    "code": "BW",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          24,
+          -22
+        ]
+      }
+    }
+  },
+  {
+    "name": "Belarus",
+    "fullName": "Republic of Belarus",
+    "code": "BY",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          28,
+          53
+        ]
+      }
+    }
+  },
+  {
+    "name": "Belize",
+    "fullName": "Belize",
+    "code": "BZ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -88.75,
+          17.25
+        ]
+      }
+    }
+  },
+  {
+    "name": "Canada",
+    "fullName": "Canada",
+    "code": "CA",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -96,
+          60
+        ]
+      }
+    }
+  },
+  {
+    "name": "Cocos (Keeling) Islands",
+    "fullName": "Territory of Cocos (Keeling) Islands",
+    "code": "CC",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          96.833333,
+          -12
+        ]
+      }
+    }
+  },
+  {
+    "name": "Democratic Republic of the Congo",
+    "fullName": "Democratic Republic of the Congo",
+    "code": "CD",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          25,
+          0
+        ]
+      }
+    }
+  },
+  {
+    "name": "Central African Republic",
+    "fullName": "Central African Republic",
+    "code": "CF",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          21,
+          7
+        ]
+      }
+    }
+  },
+  {
+    "name": "Republic of the Congo",
+    "fullName": "Republic of the Congo",
+    "code": "CG",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          15,
+          -1
+        ]
+      }
+    }
+  },
+  {
+    "name": "Switzerland",
+    "fullName": "Swiss Confederation",
+    "code": "CH",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          8,
+          47
+        ]
+      }
+    }
+  },
+  {
+    "name": "Cote d'Ivoire",
+    "fullName": "Republic of Cote d'Ivoire",
+    "code": "CI",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -5,
+          8
+        ]
+      }
+    }
+  },
+  {
+    "name": "Cook Islands",
+    "fullName": "Cook Islands",
+    "code": "CK",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -161.583333,
+          -16.083333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Chile",
+    "fullName": "Republic of Chile",
+    "code": "CL",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -71,
+          -30
+        ]
+      }
+    }
+  },
+  {
+    "name": "Cameroon",
+    "fullName": "Republic of Cameroon",
+    "code": "CM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          12,
+          6
+        ]
+      }
+    }
+  },
+  {
+    "name": "China",
+    "fullName": "People's Republic of China",
+    "code": "CN",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          105,
+          35
+        ]
+      }
+    }
+  },
+  {
+    "name": "Colombia",
+    "fullName": "Republic of Colombia",
+    "code": "CO",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -72,
+          4
+        ]
+      }
+    }
+  },
+  {
+    "name": "Costa Rica",
+    "fullName": "Republic of Costa Rica",
+    "code": "CR",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -84,
+          10
+        ]
+      }
+    }
+  },
+  {
+    "name": "Cuba",
+    "fullName": "Republic of Cuba",
+    "code": "CU",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -79.5,
+          22
+        ]
+      }
+    }
+  },
+  {
+    "name": "Cape Verde",
+    "fullName": "Republic of Cape Verde",
+    "code": "CV",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -24,
+          16
+        ]
+      }
+    }
+  },
+  {
+    "name": "Curaçao",
+    "fullName": "Land Curacao",
+    "code": "CW",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -69,
+          12.166667
+        ]
+      }
+    }
+  },
+  {
+    "name": "Christmas Island",
+    "fullName": "Territory of Christmas Island",
+    "code": "CX",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          105.666667,
+          -10.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Cyprus",
+    "fullName": "Republic of Cyprus",
+    "code": "CY",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          33,
+          35
+        ]
+      }
+    }
+  },
+  {
+    "name": "Czech Republic",
+    "fullName": "Czech Republic",
+    "code": "CZ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          15,
+          49.75
+        ]
+      }
+    }
+  },
+  {
+    "name": "Germany",
+    "fullName": "Federal Republic of Germany",
+    "code": "DE",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          10.5,
+          51.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Djibouti",
+    "fullName": "Republic of Djibouti",
+    "code": "DJ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          42.5,
+          11.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Denmark",
+    "fullName": "Kingdom of Denmark",
+    "code": "DK",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          10,
+          56
+        ]
+      }
+    }
+  },
+  {
+    "name": "Dominica",
+    "fullName": "Commonwealth of Dominica",
+    "code": "DM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -61.333333,
+          15.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Dominican Republic",
+    "fullName": "Dominican Republic",
+    "code": "DO",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -70.666667,
+          19
+        ]
+      }
+    }
+  },
+  {
+    "name": "Algeria",
+    "fullName": "People's Democratic Republic of Algeria",
+    "code": "DZ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          3,
+          28
+        ]
+      }
+    }
+  },
+  {
+    "name": "Ecuador",
+    "fullName": "Republic of Ecuador",
+    "code": "EC",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -77.5,
+          -2
+        ]
+      }
+    }
+  },
+  {
+    "name": "Estonia",
+    "fullName": "Republic of Estonia",
+    "code": "EE",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          26,
+          59
+        ]
+      }
+    }
+  },
+  {
+    "name": "Egypt",
+    "fullName": "Arab Republic of Egypt",
+    "code": "EG",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          30,
+          27
+        ]
+      }
+    }
+  },
+  {
+    "name": "Western Sahara",
+    "fullName": "Western Sahara",
+    "code": "EH",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -13.5,
+          25
+        ]
+      }
+    }
+  },
+  {
+    "name": "Eritrea",
+    "fullName": "State of Eritrea",
+    "code": "ER",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          39,
+          15
+        ]
+      }
+    }
+  },
+  {
+    "name": "Spain",
+    "fullName": "Kingdom of Spain",
+    "code": "ES",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -4,
+          40
+        ]
+      }
+    }
+  },
+  {
+    "name": "Ethiopia",
+    "fullName": "Federal Democratic Republic of Ethiopia",
+    "code": "ET",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          38,
+          8
+        ]
+      }
+    }
+  },
+  {
+    "name": "Finland",
+    "fullName": "Republic of Finland",
+    "code": "FI",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          26,
+          64
+        ]
+      }
+    }
+  },
+  {
+    "name": "Fiji",
+    "fullName": "Republic of Fiji",
+    "code": "FJ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          178,
+          -18
+        ]
+      }
+    }
+  },
+  {
+    "name": "Falkland Islands",
+    "fullName": "Falkland Islands (Islas Malvinas)",
+    "code": "FK",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -59.166667,
+          -51.75
+        ]
+      }
+    }
+  },
+  {
+    "name": "Federated States of Micronesia",
+    "fullName": "Federated States of Micronesia",
+    "code": "FM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          152,
+          5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Faroe Islands",
+    "fullName": "Faroe Islands",
+    "code": "FO",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -7,
+          62
+        ]
+      }
+    }
+  },
+  {
+    "name": "France",
+    "fullName": "French Republic",
+    "code": "FR",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          2,
+          46
+        ]
+      }
+    }
+  },
+  {
+    "name": "Gabon",
+    "fullName": "Gabonese Republic",
+    "code": "GA",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          11.75,
+          -1
+        ]
+      }
+    }
+  },
+  {
+    "name": "United Kingdom",
+    "fullName": "United Kingdom of Great Britain and Northern Ireland",
+    "code": "GB",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -4,
+          54
+        ]
+      }
+    }
+  },
+  {
+    "name": "Grenada",
+    "fullName": "Grenada",
+    "code": "GD",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -61.666667,
+          12.116667
+        ]
+      }
+    }
+  },
+  {
+    "name": "Georgia",
+    "fullName": "Georgia",
+    "code": "GE",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          43.499905,
+          41.999981
+        ]
+      }
+    }
+  },
+  {
+    "name": "French Guiana",
+    "fullName": "Department of Guiana",
+    "code": "GF",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -53,
+          4
+        ]
+      }
+    }
+  },
+  {
+    "name": "Guernsey",
+    "fullName": "Bailiwick of Guernsey",
+    "code": "GG",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -2.333333,
+          49.583333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Ghana",
+    "fullName": "Republic of Ghana",
+    "code": "GH",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -2,
+          8
+        ]
+      }
+    }
+  },
+  {
+    "name": "Gibraltar",
+    "fullName": "Gibraltar",
+    "code": "GI",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -5.35,
+          36.133333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Greenland",
+    "fullName": "Greenland",
+    "code": "GL",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -40,
+          72
+        ]
+      }
+    }
+  },
+  {
+    "name": "Gambia",
+    "fullName": "Republic of The Gambia",
+    "code": "GM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -15.5,
+          13.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Guinea",
+    "fullName": "Republic of Guinea",
+    "code": "GN",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -10,
+          11
+        ]
+      }
+    }
+  },
+  {
+    "name": "Guadeloupe",
+    "fullName": "Department of Guadeloupe",
+    "code": "GP",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -61.583333,
+          16.25
+        ]
+      }
+    }
+  },
+  {
+    "name": "Equatorial Guinea",
+    "fullName": "Republic of Equatorial Guinea",
+    "code": "GQ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          10,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "name": "Greece",
+    "fullName": "Hellenic Republic",
+    "code": "GR",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          22,
+          39
+        ]
+      }
+    }
+  },
+  {
+    "name": "South Georgia and South Sandwich Islands",
+    "fullName": "South Georgia and the South Sandwich Islands",
+    "code": "GS",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -33,
+          -56
+        ]
+      }
+    }
+  },
+  {
+    "name": "Guatemala",
+    "fullName": "Republic of Guatemala",
+    "code": "GT",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -90.25,
+          15.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Guam",
+    "fullName": "Territory of Guam",
+    "code": "GU",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          144.7366667,
+          13.4444444
+        ]
+      }
+    }
+  },
+  {
+    "name": "Guinea-Bissau",
+    "fullName": "Republic of Guinea-Bissau",
+    "code": "GW",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -15,
+          12
+        ]
+      }
+    }
+  },
+  {
+    "name": "Guyana",
+    "fullName": "Co-operative Republic of Guyana",
+    "code": "GY",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -59,
+          5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Hong Kong",
+    "fullName": "Hong Kong Special Administrative Region",
+    "code": "HK",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          114.166667,
+          22.25
+        ]
+      }
+    }
+  },
+  {
+    "name": "Heard Island and McDonald Islands",
+    "fullName": "Territory of Heard Island and McDonald Islands",
+    "code": "HM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          73,
+          -53
+        ]
+      }
+    }
+  },
+  {
+    "name": "Honduras",
+    "fullName": "Republic of Honduras",
+    "code": "HN",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -86.5,
+          15
+        ]
+      }
+    }
+  },
+  {
+    "name": "Croatia",
+    "fullName": "Republic of Croatia",
+    "code": "HR",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          15.5,
+          45.166667
+        ]
+      }
+    }
+  },
+  {
+    "name": "Haiti",
+    "fullName": "Republic of Haiti",
+    "code": "HT",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -72.416667,
+          19
+        ]
+      }
+    }
+  },
+  {
+    "name": "Hungary",
+    "fullName": "Republic of Hungary",
+    "code": "HU",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          20,
+          47
+        ]
+      }
+    }
+  },
+  {
+    "name": "Indonesia",
+    "fullName": "Republic of Indonesia",
+    "code": "ID",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          120,
+          -5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Ireland",
+    "fullName": "Ireland",
+    "code": "IE",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -8,
+          53
+        ]
+      }
+    }
+  },
+  {
+    "name": "Israel",
+    "fullName": "State of Israel",
+    "code": "IL",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          34.75,
+          31.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Isle of Man",
+    "fullName": "Isle of Man",
+    "code": "IM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -4.5,
+          54.25
+        ]
+      }
+    }
+  },
+  {
+    "name": "India",
+    "fullName": "Republic of India",
+    "code": "IN",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          77,
+          20
+        ]
+      }
+    }
+  },
+  {
+    "name": "British Indian Ocean Territory",
+    "fullName": "British Indian Ocean Territory",
+    "code": "IO",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          72,
+          -6
+        ]
+      }
+    }
+  },
+  {
+    "name": "Iraq",
+    "fullName": "Republic of Iraq",
+    "code": "IQ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          44,
+          33
+        ]
+      }
+    }
+  },
+  {
+    "name": "Iran",
+    "fullName": "Islamic Republic of Iran",
+    "code": "IR",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          53,
+          32
+        ]
+      }
+    }
+  },
+  {
+    "name": "Iceland",
+    "fullName": "Republic of Iceland",
+    "code": "IS",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -18,
+          65
+        ]
+      }
+    }
+  },
+  {
+    "name": "Italy",
+    "fullName": "Italian Republic",
+    "code": "IT",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          12.833333,
+          42.833333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Jersey",
+    "fullName": "Bailiwick of Jersey",
+    "code": "JE",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -2.116667,
+          49.216667
+        ]
+      }
+    }
+  },
+  {
+    "name": "Jamaica",
+    "fullName": "Jamaica",
+    "code": "JM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -77.5,
+          18.25
+        ]
+      }
+    }
+  },
+  {
+    "name": "Jordan",
+    "fullName": "Hashemite Kingdom of Jordan",
+    "code": "JO",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          36,
+          31
+        ]
+      }
+    }
+  },
+  {
+    "name": "Japan",
+    "fullName": "Japan",
+    "code": "JP",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          138,
+          36
+        ]
+      }
+    }
+  },
+  {
+    "name": "Kenya",
+    "fullName": "Republic of Kenya",
+    "code": "KE",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          38,
+          1
+        ]
+      }
+    }
+  },
+  {
+    "name": "Kyrgyzstan",
+    "fullName": "Kyrgyz Republic",
+    "code": "KG",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          75,
+          41
+        ]
+      }
+    }
+  },
+  {
+    "name": "Cambodia",
+    "fullName": "Kingdom of Cambodia",
+    "code": "KH",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          105,
+          13
+        ]
+      }
+    }
+  },
+  {
+    "name": "Kiribati",
+    "fullName": "Republic of Kiribati",
+    "code": "KI",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -170,
+          -5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Comoros",
+    "fullName": "Union of the Comoros",
+    "code": "KM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          44.25,
+          -12.166667
+        ]
+      }
+    }
+  },
+  {
+    "name": "Saint Kitts and Nevis",
+    "fullName": "Federation of Saint Kitts and Nevis",
+    "code": "KN",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -62.75,
+          17.333333
+        ]
+      }
+    }
+  },
+  {
+    "name": "North Korea",
+    "fullName": "Democratic People's Republic of Korea",
+    "code": "KP",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          127,
+          40
+        ]
+      }
+    }
+  },
+  {
+    "name": "South Korea",
+    "fullName": "Republic of Korea",
+    "code": "KR",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          127.5,
+          37
+        ]
+      }
+    }
+  },
+  {
+    "name": "Kuwait",
+    "fullName": "State of Kuwait",
+    "code": "KW",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          47.75,
+          29.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Cayman Islands",
+    "fullName": "Cayman Islands",
+    "code": "KY",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -80.666667,
+          19.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Kazakhstan",
+    "fullName": "Republic of Kazakhstan",
+    "code": "KZ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          68,
+          48
+        ]
+      }
+    }
+  },
+  {
+    "name": "Laos",
+    "fullName": "Lao People's Democratic Republic",
+    "code": "LA",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          105,
+          18
+        ]
+      }
+    }
+  },
+  {
+    "name": "Lebanon",
+    "fullName": "Republic of Lebanon",
+    "code": "LB",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          35.833333,
+          33.833333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Saint Lucia",
+    "fullName": "Saint Lucia",
+    "code": "LC",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -60.966667,
+          13.883333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Liechtenstein",
+    "fullName": "Principality of Liechtenstein",
+    "code": "LI",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          9.533333,
+          47.166667
+        ]
+      }
+    }
+  },
+  {
+    "name": "Sri Lanka",
+    "fullName": "Democratic Socialist Republic of Sri Lanka",
+    "code": "LK",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          81,
+          7
+        ]
+      }
+    }
+  },
+  {
+    "name": "Liberia",
+    "fullName": "Republic of Liberia",
+    "code": "LR",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -9.5,
+          6.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Lesotho",
+    "fullName": "Kingdom of Lesotho",
+    "code": "LS",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          28.25,
+          -29.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Lithuania",
+    "fullName": "Republic of Lithuania",
+    "code": "LT",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          24,
+          56
+        ]
+      }
+    }
+  },
+  {
+    "name": "Luxembourg",
+    "fullName": "Grand Duchy of Luxembourg",
+    "code": "LU",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          6.166667,
+          49.75
+        ]
+      }
+    }
+  },
+  {
+    "name": "Latvia",
+    "fullName": "Republic of Latvia",
+    "code": "LV",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          25,
+          57
+        ]
+      }
+    }
+  },
+  {
+    "name": "Libya",
+    "fullName": "Libya",
+    "code": "LY",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          17,
+          25
+        ]
+      }
+    }
+  },
+  {
+    "name": "Morocco",
+    "fullName": "Kingdom of Morocco",
+    "code": "MA",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -5,
+          32
+        ]
+      }
+    }
+  },
+  {
+    "name": "Monaco",
+    "fullName": "Principality of Monaco",
+    "code": "MC",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          7.4,
+          43.733333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Moldova",
+    "fullName": "Republic of Moldova",
+    "code": "MD",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          29,
+          47
+        ]
+      }
+    }
+  },
+  {
+    "name": "Montenegro",
+    "fullName": "Montenegro",
+    "code": "ME",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          19.3,
+          42.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Saint Martin",
+    "fullName": "Saint Martin",
+    "code": "MF",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -63.05833,
+          18.075
+        ]
+      }
+    }
+  },
+  {
+    "name": "Madagascar",
+    "fullName": "Republic of Madagascar",
+    "code": "MG",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          47,
+          -20
+        ]
+      }
+    }
+  },
+  {
+    "name": "Marshall Islands",
+    "fullName": "Republic of the Marshall Islands",
+    "code": "MH",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          167,
+          10
+        ]
+      }
+    }
+  },
+  {
+    "name": "Macedonia",
+    "fullName": "Republic of Macedonia",
+    "code": "MK",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          22,
+          41.833333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Mali",
+    "fullName": "Republic of Mali",
+    "code": "ML",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -4,
+          17
+        ]
+      }
+    }
+  },
+  {
+    "name": "Burma",
+    "fullName": "Union of Burma",
+    "code": "MM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          98,
+          22
+        ]
+      }
+    }
+  },
+  {
+    "name": "Mongolia",
+    "fullName": "Mongolia",
+    "code": "MN",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          105,
+          46
+        ]
+      }
+    }
+  },
+  {
+    "name": "Macau",
+    "fullName": "Macau Special Administrative Region",
+    "code": "MO",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          113.559722,
+          22.157778
+        ]
+      }
+    }
+  },
+  {
+    "name": "Northern Mariana Islands",
+    "fullName": "Commonwealth of the Northern Mariana Islands",
+    "code": "MP",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          146,
+          16
+        ]
+      }
+    }
+  },
+  {
+    "name": "Martinique",
+    "fullName": "Department of Martinique",
+    "code": "MQ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -61,
+          14.666667
+        ]
+      }
+    }
+  },
+  {
+    "name": "Mauritania",
+    "fullName": "Islamic Republic of Mauritania",
+    "code": "MR",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -12,
+          20
+        ]
+      }
+    }
+  },
+  {
+    "name": "Montserrat",
+    "fullName": "Montserrat",
+    "code": "MS",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -62.2,
+          16.75
+        ]
+      }
+    }
+  },
+  {
+    "name": "Malta",
+    "fullName": "Republic of Malta",
+    "code": "MT",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          14.433333,
+          35.916667
+        ]
+      }
+    }
+  },
+  {
+    "name": "Mauritius",
+    "fullName": "Republic of Mauritius",
+    "code": "MU",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          57.583333,
+          -20.3
+        ]
+      }
+    }
+  },
+  {
+    "name": "Maldives",
+    "fullName": "Republic of Maldives",
+    "code": "MV",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          73,
+          3.2
+        ]
+      }
+    }
+  },
+  {
+    "name": "Malawi",
+    "fullName": "Republic of Malawi",
+    "code": "MW",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          34,
+          -13.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Mexico",
+    "fullName": "United Mexican States",
+    "code": "MX",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -102,
+          23
+        ]
+      }
+    }
+  },
+  {
+    "name": "Malaysia",
+    "fullName": "Malaysia",
+    "code": "MY",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          112.5,
+          2.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Mozambique",
+    "fullName": "Republic of Mozambique",
+    "code": "MZ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          35,
+          -18.25
+        ]
+      }
+    }
+  },
+  {
+    "name": "Namibia",
+    "fullName": "Republic of Namibia",
+    "code": "NA",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          17,
+          -22
+        ]
+      }
+    }
+  },
+  {
+    "name": "New Caledonia",
+    "fullName": "New Caledonia",
+    "code": "NC",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          165.5,
+          -21.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Niger",
+    "fullName": "Republic of Niger",
+    "code": "NE",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          8,
+          16
+        ]
+      }
+    }
+  },
+  {
+    "name": "Norfolk Island",
+    "fullName": "Territory of Norfolk Island",
+    "code": "NF",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          167.95,
+          -29.033333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Nigeria",
+    "fullName": "Federal Republic of Nigeria",
+    "code": "NG",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          8,
+          10
+        ]
+      }
+    }
+  },
+  {
+    "name": "Nicaragua",
+    "fullName": "Republic of Nicaragua",
+    "code": "NI",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -85,
+          13
+        ]
+      }
+    }
+  },
+  {
+    "name": "Netherlands",
+    "fullName": "Kingdom of the Netherlands",
+    "code": "NL",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          5.75,
+          52.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Norway",
+    "fullName": "Kingdom of Norway",
+    "code": "NO",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          10,
+          62
+        ]
+      }
+    }
+  },
+  {
+    "name": "Nepal",
+    "fullName": "Federal Democratic Republic of Nepal",
+    "code": "NP",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          84,
+          28
+        ]
+      }
+    }
+  },
+  {
+    "name": "Nauru",
+    "fullName": "Republic of Nauru",
+    "code": "NR",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          166.916667,
+          -0.533333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Niue",
+    "fullName": "Niue",
+    "code": "NU",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -169.866667,
+          -19.033333
+        ]
+      }
+    }
+  },
+  {
+    "name": "New Zealand",
+    "fullName": "New Zealand",
+    "code": "NZ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          174,
+          -42
+        ]
+      }
+    }
+  },
+  {
+    "name": "Oman",
+    "fullName": "Sultanate of Oman",
+    "code": "OM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          57,
+          21
+        ]
+      }
+    }
+  },
+  {
+    "name": "Panama",
+    "fullName": "Republic of Panama",
+    "code": "PA",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -80,
+          9
+        ]
+      }
+    }
+  },
+  {
+    "name": "Peru",
+    "fullName": "Republic of Peru",
+    "code": "PE",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -76,
+          -10
+        ]
+      }
+    }
+  },
+  {
+    "name": "French Polynesia",
+    "fullName": "French Polynesia",
+    "code": "PF",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -140,
+          -15
+        ]
+      }
+    }
+  },
+  {
+    "name": "Papua New Guinea",
+    "fullName": "Independent State of Papua New Guinea",
+    "code": "PG",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          147,
+          -6
+        ]
+      }
+    }
+  },
+  {
+    "name": "Philippines",
+    "fullName": "Republic of the Philippines",
+    "code": "PH",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          122,
+          13
+        ]
+      }
+    }
+  },
+  {
+    "name": "Pakistan",
+    "fullName": "Islamic Republic of Pakistan",
+    "code": "PK",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          70,
+          30
+        ]
+      }
+    }
+  },
+  {
+    "name": "Poland",
+    "fullName": "Republic of Poland",
+    "code": "PL",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          20,
+          52
+        ]
+      }
+    }
+  },
+  {
+    "name": "Saint Pierre and Miquelon",
+    "fullName": "Territorial Collectivity of Saint Pierre and Miquelon",
+    "code": "PM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -56.333333,
+          46.833333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Pitcairn Islands",
+    "fullName": "Henderson Ducie and Oeno Islands Pitcairn",
+    "code": "PN",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -130.1,
+          -25.066667
+        ]
+      }
+    }
+  },
+  {
+    "name": "Puerto Rico",
+    "fullName": "Commonwealth of Puerto Rico",
+    "code": "PR",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -66.4998941,
+          18.2482882
+        ]
+      }
+    }
+  },
+  {
+    "name": "West Bank",
+    "fullName": "West Bank",
+    "code": "PS",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          35.25,
+          31.666667
+        ]
+      }
+    }
+  },
+  {
+    "name": "Portugal",
+    "fullName": "Portuguese Republic",
+    "code": "PT",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -8,
+          39.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Palau",
+    "fullName": "Republic of Palau",
+    "code": "PW",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          134,
+          6
+        ]
+      }
+    }
+  },
+  {
+    "name": "Paraguay",
+    "fullName": "Republic of Paraguay",
+    "code": "PY",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -57.996389,
+          -22.993333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Qatar",
+    "fullName": "State of Qatar",
+    "code": "QA",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          51.25,
+          25.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Reunion",
+    "fullName": "Department of Reunion",
+    "code": "RE",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          55.6,
+          -21.1
+        ]
+      }
+    }
+  },
+  {
+    "name": "Romania",
+    "fullName": "Romania",
+    "code": "RO",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          25,
+          46
+        ]
+      }
+    }
+  },
+  {
+    "name": "Serbia",
+    "fullName": "Republic of Serbia",
+    "code": "RS",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          21,
+          44
+        ]
+      }
+    }
+  },
+  {
+    "name": "Russia",
+    "fullName": "Russian Federation",
+    "code": "RU",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          100,
+          60
+        ]
+      }
+    }
+  },
+  {
+    "name": "Rwanda",
+    "fullName": "Republic of Rwanda",
+    "code": "RW",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          30,
+          -2
+        ]
+      }
+    }
+  },
+  {
+    "name": "Saudi Arabia",
+    "fullName": "Kingdom of Saudi Arabia",
+    "code": "SA",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          45,
+          25
+        ]
+      }
+    }
+  },
+  {
+    "name": "Solomon Islands",
+    "fullName": "Solomon Islands",
+    "code": "SB",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          159,
+          -8
+        ]
+      }
+    }
+  },
+  {
+    "name": "Seychelles",
+    "fullName": "Republic of Seychelles",
+    "code": "SC",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          55.666667,
+          -4.583333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Sudan",
+    "fullName": "Republic of the Sudan",
+    "code": "SD",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          30,
+          16
+        ]
+      }
+    }
+  },
+  {
+    "name": "Sweden",
+    "fullName": "Kingdom of Sweden",
+    "code": "SE",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          15,
+          62
+        ]
+      }
+    }
+  },
+  {
+    "name": "Singapore",
+    "fullName": "Republic of Singapore",
+    "code": "SG",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          103.8,
+          1.366667
+        ]
+      }
+    }
+  },
+  {
+    "name": "Ascension",
+    "fullName": "Ascension and Tristan da Cunha Saint Helena",
+    "code": "SH",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -5.7,
+          -15.95
+        ]
+      }
+    }
+  },
+  {
+    "name": "Slovenia",
+    "fullName": "Republic of Slovenia",
+    "code": "SI",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          15.166667,
+          46.25
+        ]
+      }
+    }
+  },
+  {
+    "name": "Svalbard",
+    "fullName": "Svalbard and Jan Mayen",
+    "code": "SJ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          20,
+          78
+        ]
+      }
+    }
+  },
+  {
+    "name": "Slovakia",
+    "fullName": "Slovak Republic",
+    "code": "SK",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          19.5,
+          48.666667
+        ]
+      }
+    }
+  },
+  {
+    "name": "Sierra Leone",
+    "fullName": "Republic of Sierra Leone",
+    "code": "SL",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -11.5,
+          8.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "San Marino",
+    "fullName": "Republic of San Marino",
+    "code": "SM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          12.416667,
+          43.933333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Senegal",
+    "fullName": "Republic of Senegal",
+    "code": "SN",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -14,
+          14
+        ]
+      }
+    }
+  },
+  {
+    "name": "Somalia",
+    "fullName": "Somalia",
+    "code": "SO",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          48,
+          6
+        ]
+      }
+    }
+  },
+  {
+    "name": "Suriname",
+    "fullName": "Republic of Suriname",
+    "code": "SR",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -56,
+          4
+        ]
+      }
+    }
+  },
+  {
+    "name": "South Sudan",
+    "fullName": "Republic of South Sudan",
+    "code": "SS",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          30,
+          8
+        ]
+      }
+    }
+  },
+  {
+    "name": "Sao Tome and Principe",
+    "fullName": "Democratic Republic of Sao Tome and Principe",
+    "code": "ST",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          7,
+          1
+        ]
+      }
+    }
+  },
+  {
+    "name": "El Salvador",
+    "fullName": "Republic of El Salvador",
+    "code": "SV",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -88.916667,
+          13.833333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Sint Maarten",
+    "fullName": "Land Sint Maarten",
+    "code": "SX",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -63.06667,
+          18.04167
+        ]
+      }
+    }
+  },
+  {
+    "name": "Syria",
+    "fullName": "Syrian Arab Republic",
+    "code": "SY",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          38,
+          35
+        ]
+      }
+    }
+  },
+  {
+    "name": "Swaziland",
+    "fullName": "Kingdom of Swaziland",
+    "code": "SZ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          31.5,
+          -26.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Turks and Caicos Islands",
+    "fullName": "Turks and Caicos Islands",
+    "code": "TC",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -71.583333,
+          21.733333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Chad",
+    "fullName": "Republic of Chad",
+    "code": "TD",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          19,
+          15
+        ]
+      }
+    }
+  },
+  {
+    "name": "French Southern and Antarctic Lands",
+    "fullName": "French Southern and Antarctic Lands",
+    "code": "TF",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          67,
+          -43
+        ]
+      }
+    }
+  },
+  {
+    "name": "Togo",
+    "fullName": "Togolese Republic",
+    "code": "TG",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          1.166667,
+          8
+        ]
+      }
+    }
+  },
+  {
+    "name": "Thailand",
+    "fullName": "Kingdom of Thailand",
+    "code": "TH",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          100,
+          15
+        ]
+      }
+    }
+  },
+  {
+    "name": "Tajikistan",
+    "fullName": "Republic of Tajikistan",
+    "code": "TJ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          71,
+          39
+        ]
+      }
+    }
+  },
+  {
+    "name": "Tokelau",
+    "fullName": "Tokelau",
+    "code": "TK",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -171.75,
+          -9
+        ]
+      }
+    }
+  },
+  {
+    "name": "Timor-Leste",
+    "fullName": "Democratic Republic of Timor-Leste",
+    "code": "TL",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          125.75,
+          -8.833333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Turkmenistan",
+    "fullName": "Turkmenistan",
+    "code": "TM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          60,
+          40
+        ]
+      }
+    }
+  },
+  {
+    "name": "Tunisia",
+    "fullName": "Tunisian Republic",
+    "code": "TN",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          9,
+          34
+        ]
+      }
+    }
+  },
+  {
+    "name": "Tonga",
+    "fullName": "Kingdom of Tonga",
+    "code": "TO",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -175,
+          -20
+        ]
+      }
+    }
+  },
+  {
+    "name": "Turkey",
+    "fullName": "Republic of Turkey",
+    "code": "TR",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          34.911546,
+          39.059012
+        ]
+      }
+    }
+  },
+  {
+    "name": "Trinidad and Tobago",
+    "fullName": "Republic of Trinidad and Tobago",
+    "code": "TT",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -61,
+          11
+        ]
+      }
+    }
+  },
+  {
+    "name": "Tuvalu",
+    "fullName": "Tuvalu",
+    "code": "TV",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          178,
+          -8
+        ]
+      }
+    }
+  },
+  {
+    "name": "Taiwan",
+    "fullName": "Taiwan Province of China",
+    "code": "TW",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          121,
+          24
+        ]
+      }
+    }
+  },
+  {
+    "name": "Tanzania",
+    "fullName": "United Republic of Tanzania",
+    "code": "TZ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          35,
+          -6
+        ]
+      }
+    }
+  },
+  {
+    "name": "Ukraine",
+    "fullName": "Ukraine",
+    "code": "UA",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          32,
+          49
+        ]
+      }
+    }
+  },
+  {
+    "name": "Uganda",
+    "fullName": "Republic of Uganda",
+    "code": "UG",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          33,
+          2
+        ]
+      }
+    }
+  },
+  {
+    "name": "US Minor Outlying Islands",
+    "fullName": "United States Minor Outlying Islands",
+    "code": "UM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -162.0725,
+          5.8811111
+        ]
+      }
+    }
+  },
+  {
+    "name": "United States",
+    "fullName": "United States of America",
+    "code": "US",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -98.5795,
+          39.828175
+        ]
+      }
+    }
+  },
+  {
+    "name": "Uruguay",
+    "fullName": "Oriental Republic of Uruguay",
+    "code": "UY",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -56,
+          -33
+        ]
+      }
+    }
+  },
+  {
+    "name": "Uzbekistan",
+    "fullName": "Republic of Uzbekistan",
+    "code": "UZ",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          63.84911,
+          41.707542
+        ]
+      }
+    }
+  },
+  {
+    "name": "Vatican City",
+    "fullName": "State of the Vatican City",
+    "code": "VA",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          12.45,
+          41.9
+        ]
+      }
+    }
+  },
+  {
+    "name": "Saint Vincent and the Grenadines",
+    "fullName": "Saint Vincent and the Grenadines",
+    "code": "VC",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -61.2,
+          13.083333
+        ]
+      }
+    }
+  },
+  {
+    "name": "Venezuela",
+    "fullName": "Bolivarian Republic of Venezuela",
+    "code": "VE",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -66,
+          8
+        ]
+      }
+    }
+  },
+  {
+    "name": "British Virgin Islands",
+    "fullName": "British Virgin Islands",
+    "code": "VG",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -64.5,
+          18.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "US Virgin Islands",
+    "fullName": "United States Virgin Islands",
+    "code": "VI",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -64.9834807,
+          18.3482891
+        ]
+      }
+    }
+  },
+  {
+    "name": "Vietnam",
+    "fullName": "Socialist Republic of Vietnam",
+    "code": "VN",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          107.833333,
+          16.166667
+        ]
+      }
+    }
+  },
+  {
+    "name": "Vanuatu",
+    "fullName": "Republic of Vanuatu",
+    "code": "VU",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          167,
+          -16
+        ]
+      }
+    }
+  },
+  {
+    "name": "Wallis and Futuna",
+    "fullName": "Wallis and Futuna",
+    "code": "WF",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -176.2,
+          -13.3
+        ]
+      }
+    }
+  },
+  {
+    "name": "Samoa",
+    "fullName": "Independent State of Samoa",
+    "code": "WS",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          -172.178309,
+          -13.803096
+        ]
+      }
+    }
+  },
+  {
+    "name": "Yemen",
+    "fullName": "Republic of Yemen",
+    "code": "YE",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          47.5,
+          15.5
+        ]
+      }
+    }
+  },
+  {
+    "name": "Mayotte",
+    "fullName": "Department of Mayotte",
+    "code": "YT",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          45.166667,
+          -12.833333
+        ]
+      }
+    }
+  },
+  {
+    "name": "South Africa",
+    "fullName": "South Africa",
+    "code": "ZA",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          26,
+          -30
+        ]
+      }
+    }
+  },
+  {
+    "name": "Zambia",
+    "fullName": "Republic of Zambia",
+    "code": "ZM",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          30,
+          -15
+        ]
+      }
+    }
+  },
+  {
+    "name": "Zimbabwe",
+    "fullName": "Republic of Zimbabwe",
+    "code": "ZW",
+    "geo": {
+      "centroid": {
+        "type": "Feature",
+        "coordinates": [
+          29,
+          -19
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,1 @@
+cat countries.json | jq "[.[] | { name: .name, fullName: .fullName, code: .code, geo: { centroid: { type:\"Feature\", coordinates: [.lon, .lat] } } }]" > normalized-coordinates.json

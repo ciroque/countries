@@ -1,11 +1,9 @@
 package org.ciroque.countries.model
 
-case class Country(code: String, lon: Double, lat: Double, name: String, fullName: String)
+case class Country(code: String, name: String, fullName: String)
 
-object Country {
-  def Empty: Country = new Country(null, 0.0, 0.0, null, null)
-}
+object Country extends spray.json.DefaultJsonProtocol {
+  def Empty: Country = new Country(null, null, null)
 
-object CountryProtocol extends spray.json.DefaultJsonProtocol {
-  implicit val CountryInfoProtocol = jsonFormat5(Country.apply)
+  implicit val CountryInfoProtocol = jsonFormat3(Country.apply)
 }

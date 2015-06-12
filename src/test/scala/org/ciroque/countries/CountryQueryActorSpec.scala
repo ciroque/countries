@@ -19,12 +19,12 @@ class CountryQueryActorSpec extends TestKit(ActorSystem("CountryQueryActorTestin
 
   val noCountries = List()
 
-  val countryA = new Country("AA", 1.1, 1.2, "Country A", "Country A Full Name")
-  val countryB = new Country("BB", 2.1, 2.2, "Country B", "Country B Full Name")
-  val countryC = new Country("CC", 3.1, 3.2, "Country C", "Country C Full Name")
-  val countryD = new Country("DD", 4.1, 4.2, "Country D", "Country D Full Name")
-  val countryE = new Country("EE", 5.1, 5.2, "Country E", "Country E Full Name")
-  val countryF = new Country("FF", 6.1, 6.2, "Odd Name", "Country F Full Name")
+  val countryA = new Country("AA", "Country A", "Country A Full Name")
+  val countryB = new Country("BB", "Country B", "Country B Full Name")
+  val countryC = new Country("CC", "Country C", "Country C Full Name")
+  val countryD = new Country("DD", "Country D", "Country D Full Name")
+  val countryE = new Country("EE", "Country E", "Country E Full Name")
+  val countryF = new Country("FF", "Odd Name", "Country F Full Name")
 
   val allCountries = List(
     countryA,

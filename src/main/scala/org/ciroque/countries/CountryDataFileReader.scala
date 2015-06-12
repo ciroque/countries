@@ -1,6 +1,6 @@
 package org.ciroque.countries
 
-import org.ciroque.countries.model.{CountryProtocol, Country}
+import org.ciroque.countries.model.Country
 import spray.json.JsonParser.ParsingException
 import spray.json._
 
@@ -14,7 +14,7 @@ class CountryDataFileReader(filename: String) extends CountryDataLoader {
       val fileContent = source.getLines().mkString
       val parsed = fileContent.parseJson
 
-      import CountryProtocol._
+      import Country._
       Some(parsed.convertTo[List[Country]])
 
     } catch {

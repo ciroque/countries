@@ -8,9 +8,9 @@ object MockCountryDataLoader extends CountryDataLoader {
   }
 
   val countryList = List(
-    Country("US", 0.0, 0.0, "USA", "United States of America"),
-    Country("MX", 0.0, 0.0, "Mexico", "Mexico"),
-    Country("CA", 0.0, 0.0, "Canada", "People's Republic of Canadia"),
-    Country("LU", 0.0, 0.0, "Luxembourg", "Grand Duchy of Luxembourg")
+    Country("US", "USA", "United States of America"),
+    Country("MX", "Mexico", "Mexico"),
+    Country("CA", "Canada", "People's Republic of Canadia"),
+    Country("LU", "Luxembourg", "Grand Duchy of Luxembourg")
   )
 }

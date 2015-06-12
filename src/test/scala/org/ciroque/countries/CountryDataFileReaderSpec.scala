@@ -5,7 +5,7 @@ import org.scalatest.{FlatSpec, Matchers}
 
 class CountryDataFileReaderSpec extends FlatSpec with Matchers {
   "CountryDataFileReader" should "load a valid file and convert it to a List[Country]" in {
-    val reader = new CountryDataFileReader("/testdata/valid-countries.json")
+    val reader = new CountryDataFileReader("/countries.json")
     val countriesOption = reader.load()
     countriesOption shouldBe 'defined
   }

@@ -1,7 +1,6 @@
 package org.ciroque.countries.responses
 
 import org.ciroque.countries.model.Country
-import org.ciroque.countries.model.CountryProtocol._
 import spray.json._
 
 object CountryResponseProtocol extends DefaultJsonProtocol with RootJsonFormat[CountryResponse] {

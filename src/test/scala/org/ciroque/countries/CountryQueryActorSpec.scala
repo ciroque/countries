@@ -2,7 +2,7 @@ package org.ciroque.countries
 
 import akka.actor.{ActorSystem, Props}
 import akka.testkit.{ImplicitSender, TestKit}
-import org.ciroque.countries.model.Country
+import org.ciroque.countries.model.{Country, ParentGeoNode}
 import org.ciroque.countries.queries.{CountryCodeQuery, CountryNameQuery, EmptyQuery}
 import org.scalatest._
 
@@ -19,12 +19,12 @@ class CountryQueryActorSpec extends TestKit(ActorSystem("CountryQueryActorTestin
 
   val noCountries = List()
 
-  val countryA = new Country("AA", "Country A", "Country A Full Name")
-  val countryB = new Country("BB", "Country B", "Country B Full Name")
-  val countryC = new Country("CC", "Country C", "Country C Full Name")
-  val countryD = new Country("DD", "Country D", "Country D Full Name")
-  val countryE = new Country("EE", "Country E", "Country E Full Name")
-  val countryF = new Country("FF", "Odd Name", "Country F Full Name")
+  val countryA = new Country("AA", "Country A", "Country A Full Name", ParentGeoNode.Empty)
+  val countryB = new Country("BB", "Country B", "Country B Full Name", ParentGeoNode.Origin)
+  val countryC = new Country("CC", "Country C", "Country C Full Name", ParentGeoNode.Empty)
+  val countryD = new Country("DD", "Country D", "Country D Full Name", ParentGeoNode.Origin)
+  val countryE = new Country("EE", "Country E", "Country E Full Name", ParentGeoNode.Empty)
+  val countryF = new Country("FF", "Odd Name", "Country F Full Name", ParentGeoNode.Origin)
 
   val allCountries = List(
     countryA,

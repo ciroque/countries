@@ -23,6 +23,17 @@ class CountryServiceSpec
     headers.contains(RawHeader("Access-Control-Allow-Origin", "example.com"))
   }
 
+  def assertHalLinks(body: String, supplemental: String) = {
+    body must contain("_links")
+    body must contain("self")
+    body must contain(supplemental)
+  }
+
+  def assertNoHalLinks(body: String) = {
+    body must not contain "_links"
+    body must not contain "self"
+  }
+
   "CountryService" should {
     "Return documentation instructions on the root path" in {
       Get("/") ~> routes ~> check {
@@ -37,6 +48,7 @@ class CountryServiceSpec
       Get(s"/${Stringz.Routes.Countries}/") ~> routes ~> check {
         status.intValue must_== 200
         assertCorsHeaders(headers)
+        assertHalLinks(responseAs[String], "")
         MockCountryDataLoader.countryList.foreach {
           country =>
             responseAs[String] must contain(country.fullName)
@@ -46,63 +58,77 @@ class CountryServiceSpec
     }
 
     "Return the correct country from a valid country code" in {
-      Get(s"/${Stringz.Routes.Countries}?countryCode=US") ~> routes ~> check {
+      val query = "?countryCode=US"
+      Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
         status.intValue must_== 200
         assertCorsHeaders(headers)
+        assertHalLinks(responseAs[String], query)
         contentType.mediaType mustEqual `application/json`
         responseAs[String] must contain("United States of America")
       }
     }
 
     "Return the correct country from a valid country code in a case-insensitive manner" in {
-      Get(s"/${Stringz.Routes.Countries}?countryCode=us") ~> routes ~> check {
+      val query = "?countryCode=us"
+      Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
         status.intValue must_== 200
         assertCorsHeaders(headers)
+        assertHalLinks(responseAs[String], query)
         contentType.mediaType mustEqual `application/json`
         responseAs[String] must contain("United States of America")
       }
     }
 
     "Return the correct country from a valid country name" in {
-      Get(s"/${Stringz.Routes.Countries}?name=Canada") ~> routes ~> check {
+      val query = "?name=Canada"
+      Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
         status.intValue must_== 200
         assertCorsHeaders(headers)
+        assertHalLinks(responseAs[String], query)
         contentType.mediaType mustEqual `application/json`
         responseAs[String] must contain("People's Republic of Canadia")
       }
     }
 
     "Return the correct country from a valid country name in a case-insensitive manner" in {
-      Get(s"/${Stringz.Routes.Countries}?name=canada") ~> routes ~> check {
+      val query = "?name=canada"
+      Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
         status.intValue must_== 200
         assertCorsHeaders(headers)
+        assertHalLinks(responseAs[String], query)
         contentType.mediaType mustEqual `application/json`
         responseAs[String] must contain("People's Republic of Canadia")
       }
     }
 
     "Return a 404 when given an invalid country code" in {
-      Get(s"/${Stringz.Routes.Countries}?countryCode=ZZ") ~> routes ~> check {
+      val query = "?countryCode=ZZ"
+      Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
         status.intValue must_== 404
         assertCorsHeaders(headers)
+        assertNoHalLinks(responseAs[String])
         contentType.mediaType mustEqual `application/json`
         responseAs[String] mustEqual "{}"
       }
     }
 
     "Return a 404 when given an invalid country name" in {
-      Get(s"/${Stringz.Routes.Countries}?name=bolshevic") ~> routes ~> check {
+      val query = "?name=bolshevic"
+      Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
         status.intValue must_== 404
         assertCorsHeaders(headers)
+        assertNoHalLinks(responseAs[String])
         contentType.mediaType mustEqual `application/json`
         responseAs[String] mustEqual "{}"
       }
     }
 
     "Return a 404 when given an invalid country name" in {
-      Get(s"/${Stringz.Routes.Countries}?name=bolshevic") ~> routes ~> check {
+      val query = "?name=bolshevic"
+      Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
         status.intValue must_== 404
         assertCorsHeaders(headers)
+        assertNoHalLinks(responseAs[String])
         contentType.mediaType mustEqual `application/json`
         responseAs[String] mustEqual "{}"
       }

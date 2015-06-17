@@ -7,10 +7,10 @@ import akka.util.Timeout
 import com.wordnik.swagger.annotations.{Api, ApiOperation}
 import org.ciroque.countries.model.Country
 import org.ciroque.countries.queries.{CountryCodeQuery, CountryNameQuery, EmptyQuery, Query}
-import org.ciroque.countries.responses.{CountryResponse, RootResponse}
+import org.ciroque.countries.responses.{Href, CountryResponse, RootResponse}
 import spray.http.HttpHeaders.RawHeader
 import spray.http.MediaTypes._
-import spray.http.{HttpResponse, StatusCode}
+import spray.http.{Uri, HttpResponse, StatusCode}
 import spray.httpx.SprayJsonSupport.sprayJsonMarshaller
 import spray.routing
 import spray.routing.HttpService
@@ -32,13 +32,19 @@ trait CountryService extends HttpService {
     RawHeader("Access-Control-Allow-Methods", "GET")
   )
 
-  def performQueryAndRespond(query: Query): routing.Route = {
+  def performQueryAndRespond(query: Query, uri: Uri): routing.Route = {
     val something = templeDataQuery ? query
     val somethingElse = something.mapTo[Option[List[Country]]]
-    def statusCode(countries: Option[List[Country]]): StatusCode = countries match {
-      case None => StatusCode.int2StatusCode(404)
-      case Some(_) => StatusCode.int2StatusCode(200)
+
+    def statusCode(countries: Option[List[Country]]): (StatusCode, Option[Map[String, Href]]) = countries match {
+      case None => (StatusCode.int2StatusCode(404), None)
+      case Some(_) => (StatusCode.int2StatusCode(200), Some(buildLinks()))
     }
+
+    def buildLinks(): Map[String, Href] = {
+      Map("self" -> new Href(uri.toString(), false))
+    }
+
     respondWithMediaType(`application/json`) {
       respondWithHeaders(corsHeaders) {
         complete {
@@ -46,8 +52,9 @@ trait CountryService extends HttpService {
             list =>
               import spray.json._
               import org.ciroque.countries.responses.CountryResponseProtocol._
-              val body = CountryResponse(list).toJson.toString()
-              HttpResponse(statusCode(list), body)
+              val (httpStatus, links) = statusCode(list)
+              val body = CountryResponse(list, links).toJson.toString()
+              HttpResponse(httpStatus, body)
           }
         }
       }
@@ -72,7 +79,7 @@ trait CountryService extends HttpService {
     pathEndOrSingleSlash {
       requestUri { uri =>
         get {
-          performQueryAndRespond(new EmptyQuery())
+          performQueryAndRespond(new EmptyQuery(), uri)
         }
       }
     }
@@ -84,7 +91,7 @@ trait CountryService extends HttpService {
       requestUri { uri =>
         get {
           parameters("countryCode") { query =>
-            performQueryAndRespond(new CountryCodeQuery(query))
+            performQueryAndRespond(new CountryCodeQuery(query), uri)
           }
         }
       }
@@ -97,7 +104,7 @@ trait CountryService extends HttpService {
       requestUri { uri =>
         get {
           parameters("name") { query =>
-            performQueryAndRespond(new CountryNameQuery(query))
+            performQueryAndRespond(new CountryNameQuery(query), uri)
           }
         }
       }

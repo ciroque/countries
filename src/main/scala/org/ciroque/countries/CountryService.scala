@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit
 import akka.actor.{ActorRef, Props}
 import akka.util.Timeout
 import com.wordnik.swagger.annotations.{Api, ApiOperation}
+import org.ciroque.countries.core.MethodTiming
 import org.ciroque.countries.model.Country
 import org.ciroque.countries.queries.{CountryCodeQuery, CountryNameQuery, EmptyQuery, Query}
 import org.ciroque.countries.responses.{Href, CountryResponse, RootResponse}
@@ -33,28 +34,30 @@ trait CountryService extends HttpService {
   )
 
   def performQueryAndRespond(query: Query, uri: Uri): routing.Route = {
-    val something = templeDataQuery ? query
-    val somethingElse = something.mapTo[Option[List[Country]]]
+    MethodTiming("performQueryAndRespond") {
+      val something = templeDataQuery ? query
+      val somethingElse = something.mapTo[Option[List[Country]]]
 
-    def statusCode(countries: Option[List[Country]]): (StatusCode, Option[Map[String, Href]]) = countries match {
-      case None => (StatusCode.int2StatusCode(404), None)
-      case Some(_) => (StatusCode.int2StatusCode(200), Some(buildLinks()))
-    }
+      def statusCode(countries: Option[List[Country]]): (StatusCode, Option[Map[String, Href]]) = countries match {
+        case None => (StatusCode.int2StatusCode(404), None)
+        case Some(_) => (StatusCode.int2StatusCode(200), Some(buildLinks()))
+      }
 
-    def buildLinks(): Map[String, Href] = {
-      Map("self" -> new Href(uri.toString(), false))
-    }
+      def buildLinks(): Map[String, Href] = {
+        Map("self" -> new Href(uri.toString(), false))
+      }
 
-    respondWithMediaType(`application/json`) {
-      respondWithHeaders(corsHeaders) {
-        complete {
-          somethingElse.map {
-            list =>
-              import spray.json._
-              import org.ciroque.countries.responses.CountryResponseProtocol._
-              val (httpStatus, links) = statusCode(list)
-              val body = CountryResponse(list, links).toJson.toString()
-              HttpResponse(httpStatus, body)
+      respondWithMediaType(`application/json`) {
+        respondWithHeaders(corsHeaders) {
+          complete {
+            somethingElse.map {
+              list =>
+                import spray.json._
+                import org.ciroque.countries.responses.CountryResponseProtocol._
+                val (httpStatus, links) = statusCode(list)
+                val body = CountryResponse(list, links).toJson.toString()
+                HttpResponse(httpStatus, body)
+            }
           }
         }
       }

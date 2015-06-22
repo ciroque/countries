@@ -7,7 +7,7 @@ import akka.util.Timeout
 import com.wordnik.swagger.annotations.{Api, ApiOperation}
 import org.ciroque.countries.core.MethodTiming
 import org.ciroque.countries.model.Country
-import org.ciroque.countries.queries.{CountryCodeQuery, CountryNameQuery, EmptyQuery, Query}
+import org.ciroque.countries.queries._
 import org.ciroque.countries.responses.{Href, CountryResponse, RootResponse}
 import spray.http.HttpHeaders.RawHeader
 import spray.http.MediaTypes._
@@ -89,6 +89,19 @@ trait CountryService extends HttpService {
   }
 
   @ApiOperation(value = "Country code search end-point", notes = "")
+  def countryCodesQueryRoute = pathPrefix(Stringz.Routes.Countries) {
+    pathEndOrSingleSlash {
+      requestUri { uri =>
+        get {
+          parameters("countryCodes") { query =>
+            performQueryAndRespond(new CountryCodesQuery(query.split(",").toList), uri)
+          }
+        }
+      }
+    }
+  }
+
+  @ApiOperation(value = "Country code search end-point", notes = "")
   def countryCodeQueryRoute = pathPrefix(Stringz.Routes.Countries) {
     pathEndOrSingleSlash {
       requestUri { uri =>
@@ -114,5 +127,5 @@ trait CountryService extends HttpService {
     }
   }
 
-  def routes = rootRoute ~ countryCodeQueryRoute ~ countryNameQueryRoute ~ allCountriesRoute
+  def routes = rootRoute ~ countryCodesQueryRoute ~ countryCodeQueryRoute ~ countryNameQueryRoute ~ allCountriesRoute
 }

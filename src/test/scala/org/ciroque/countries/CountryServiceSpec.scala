@@ -133,5 +133,19 @@ class CountryServiceSpec
         responseAs[String] mustEqual "{}"
       }
     }
+
+    "Return results of a multiple country code query" in {
+      val query = "?countryCodes=US,CA,LU"
+      Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
+        status.intValue must_== 200
+        assertCorsHeaders(headers)
+        assertHalLinks(responseAs[String], query)
+        contentType.mediaType mustEqual `application/json`
+        responseAs[String] must contain("United States of America")
+        responseAs[String] must contain("Canada")
+        responseAs[String] must contain("Luxembourg")
+        responseAs[String] must not contain "Mexico"
+      }
+    }
   }
 }

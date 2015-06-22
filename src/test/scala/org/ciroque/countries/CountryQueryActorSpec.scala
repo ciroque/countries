@@ -3,7 +3,7 @@ package org.ciroque.countries
 import akka.actor.{ActorSystem, Props}
 import akka.testkit.{ImplicitSender, TestKit}
 import org.ciroque.countries.model.{Country, ParentGeoNode}
-import org.ciroque.countries.queries.{CountryCodeQuery, CountryNameQuery, EmptyQuery}
+import org.ciroque.countries.queries.{CountryCodesQuery, CountryCodeQuery, CountryNameQuery, EmptyQuery}
 import org.scalatest._
 
 import scala.concurrent.duration._
@@ -109,6 +109,16 @@ class CountryQueryActorSpec extends TestKit(ActorSystem("CountryQueryActorTestin
       within(CALL_TIMEOUT) {
         templeDataQueryRef ! CountryNameQuery(countryName)
         expectMsg(None)
+      }
+    }
+
+    "return the correct list of countries given a list of country codes" in {
+      val countryCodes = List("AA", "CC", "DD", "FF")
+      val templeDataQueryRef = system.actorOf(Props(classOf[CountryQueryActor], allCountries))
+      val expected = Some(List(countryA, countryC, countryD, countryF))
+      within(CALL_TIMEOUT) {
+        templeDataQueryRef ! CountryCodesQuery(countryCodes)
+        expectMsg(expected)
       }
     }
   }

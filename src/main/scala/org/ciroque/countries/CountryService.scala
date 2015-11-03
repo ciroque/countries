@@ -4,14 +4,14 @@ import java.util.concurrent.TimeUnit
 
 import akka.actor.{ActorRef, Props}
 import akka.util.Timeout
-import com.wordnik.swagger.annotations.{Api, ApiOperation}
+import com.wordnik.swagger.annotations._
 import org.ciroque.countries.core.MethodTiming
 import org.ciroque.countries.model.Country
 import org.ciroque.countries.queries._
-import org.ciroque.countries.responses.{Href, CountryResponse, RootResponse}
+import org.ciroque.countries.responses.{CountryResponse, Href, RootResponse}
 import spray.http.HttpHeaders.RawHeader
 import spray.http.MediaTypes._
-import spray.http.{Uri, HttpResponse, StatusCode}
+import spray.http.{HttpResponse, StatusCode, Uri}
 import spray.httpx.SprayJsonSupport.sprayJsonMarshaller
 import spray.routing
 import spray.routing.HttpService
@@ -52,8 +52,8 @@ trait CountryService extends HttpService {
           complete {
             somethingElse.map {
               list =>
-                import spray.json._
                 import org.ciroque.countries.responses.CountryResponseProtocol._
+                import spray.json._
                 val (httpStatus, links) = statusCode(list)
                 val body = CountryResponse(list, links).toJson.toString()
                 HttpResponse(httpStatus, body)
@@ -64,9 +64,8 @@ trait CountryService extends HttpService {
     }
   }
 
-  @ApiOperation(value = "Hypermedia As The Engine Of Application State starting point.", notes = "")
-  def rootRoute =
-    pathEndOrSingleSlash {
+  @ApiOperation(value = "Hypermedia As The Engine Of Application State starting point.", notes = "", httpMethod = "GET", response = classOf[RootResponse])
+  def rootRoute = pathEndOrSingleSlash {
       get {
         respondWithMediaType(`application/json`) {
           complete {
@@ -77,7 +76,7 @@ trait CountryService extends HttpService {
       }
     }
 
-  @ApiOperation(value = "All countries end-point", notes = "")
+  @ApiOperation(value = "All countries end-point", notes = "", httpMethod = "GET"/*, response = classOf[CountryResponse]*/)
   def allCountriesRoute = pathPrefix(Stringz.Routes.Countries) {
     pathEndOrSingleSlash {
       requestUri { uri =>
@@ -88,7 +87,8 @@ trait CountryService extends HttpService {
     }
   }
 
-  @ApiOperation(value = "Country code search end-point", notes = "")
+  @ApiOperation(value = "Country code search end-point", notes = "Searches for countries using multiple country codes.", httpMethod = "GET")
+  @ApiImplicitParams(Array(new ApiImplicitParam(name = "countryCodes", value = "The comma-separated list of country codes to search.", required = true, paramType = "String")))
   def countryCodesQueryRoute = pathPrefix(Stringz.Routes.Countries) {
     pathEndOrSingleSlash {
       requestUri { uri =>
@@ -101,7 +101,8 @@ trait CountryService extends HttpService {
     }
   }
 
-  @ApiOperation(value = "Country code search end-point", notes = "")
+  @ApiOperation(value = "Country code search end-point", notes = "Searched for a single country by country code.", httpMethod = "GET"/*, response = classOf[CountryResponse]*/)
+  @ApiParam(name = "countryCode", value = "US")
   def countryCodeQueryRoute = pathPrefix(Stringz.Routes.Countries) {
     pathEndOrSingleSlash {
       requestUri { uri =>
@@ -114,7 +115,8 @@ trait CountryService extends HttpService {
     }
   }
 
-  @ApiOperation(value = "Country name search end-point", notes = "")
+  @ApiOperation(value = "Country name search end-point", notes = "", httpMethod = "GET"/*, response = classOf[CountryResponse]*/)
+  @ApiParam(name = "name", value = "Brazil")
   def countryNameQueryRoute = pathPrefix(Stringz.Routes.Countries) {
     pathEndOrSingleSlash {
       requestUri { uri =>

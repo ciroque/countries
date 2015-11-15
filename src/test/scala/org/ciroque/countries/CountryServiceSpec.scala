@@ -3,7 +3,7 @@ package org.ciroque.countries
 import akka.actor.ActorRefFactory
 import org.ciroque.countries.model.Country
 import org.specs2.mutable.Specification
-import spray.http.HttpHeader
+import spray.http.{StatusCodes, HttpHeader}
 import spray.http.HttpHeaders.RawHeader
 import spray.http.MediaTypes._
 import spray.testkit.Specs2RouteTest
@@ -37,7 +37,7 @@ class CountryServiceSpec
   "CountryService" should {
     "Return documentation instructions on the root path" in {
       Get("/") ~> routes ~> check {
-        status.intValue must_== 200
+        status must be(StatusCodes.OK)
         assertCorsHeaders(headers)
         contentType.mediaType mustEqual `application/json`
         responseAs[String] must contain("countryCodeSearch")
@@ -46,7 +46,7 @@ class CountryServiceSpec
 
     "Return the full list of countries on the countries endpoint" in {
       Get(s"/${Stringz.Routes.Countries}/") ~> routes ~> check {
-        status.intValue must_== 200
+        status must be(StatusCodes.OK)
         assertCorsHeaders(headers)
         assertHalLinks(responseAs[String], "")
         MockCountryDataLoader.countryList.foreach {
@@ -60,7 +60,7 @@ class CountryServiceSpec
     "Return the correct country from a valid country code" in {
       val query = "?countryCode=US"
       Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
-        status.intValue must_== 200
+        status must be(StatusCodes.OK)
         assertCorsHeaders(headers)
         assertHalLinks(responseAs[String], query)
         contentType.mediaType mustEqual `application/json`
@@ -71,7 +71,7 @@ class CountryServiceSpec
     "Return the correct country from a valid country code in a case-insensitive manner" in {
       val query = "?countryCode=us"
       Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
-        status.intValue must_== 200
+        status must be(StatusCodes.OK)
         assertCorsHeaders(headers)
         assertHalLinks(responseAs[String], query)
         contentType.mediaType mustEqual `application/json`
@@ -82,7 +82,7 @@ class CountryServiceSpec
     "Return the correct country from a valid country name" in {
       val query = "?name=Canada"
       Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
-        status.intValue must_== 200
+        status must be(StatusCodes.OK)
         assertCorsHeaders(headers)
         assertHalLinks(responseAs[String], query)
         contentType.mediaType mustEqual `application/json`
@@ -93,7 +93,7 @@ class CountryServiceSpec
     "Return the correct country from a valid country name in a case-insensitive manner" in {
       val query = "?name=canada"
       Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
-        status.intValue must_== 200
+        status must be(StatusCodes.OK)
         assertCorsHeaders(headers)
         assertHalLinks(responseAs[String], query)
         contentType.mediaType mustEqual `application/json`
@@ -104,7 +104,7 @@ class CountryServiceSpec
     "Return a 404 when given an invalid country code" in {
       val query = "?countryCode=ZZ"
       Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
-        status.intValue must_== 404
+        status must be(StatusCodes.NotFound)
         assertCorsHeaders(headers)
         assertNoHalLinks(responseAs[String])
         contentType.mediaType mustEqual `application/json`
@@ -115,7 +115,7 @@ class CountryServiceSpec
     "Return a 404 when given an invalid country name" in {
       val query = "?name=bolshevic"
       Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
-        status.intValue must_== 404
+        status must be(StatusCodes.NotFound)
         assertCorsHeaders(headers)
         assertNoHalLinks(responseAs[String])
         contentType.mediaType mustEqual `application/json`
@@ -126,7 +126,7 @@ class CountryServiceSpec
     "Return a 404 when given an invalid country name" in {
       val query = "?name=bolshevic"
       Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
-        status.intValue must_== 404
+        status must be(StatusCodes.NotFound)
         assertCorsHeaders(headers)
         assertNoHalLinks(responseAs[String])
         contentType.mediaType mustEqual `application/json`
@@ -137,7 +137,7 @@ class CountryServiceSpec
     "Return results of a multiple country code query" in {
       val query = "?countryCodes=US,CA,LU"
       Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
-        status.intValue must_== 200
+        status must be(StatusCodes.OK)
         assertCorsHeaders(headers)
         assertHalLinks(responseAs[String], query)
         contentType.mediaType mustEqual `application/json`

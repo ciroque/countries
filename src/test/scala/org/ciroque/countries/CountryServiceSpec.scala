@@ -2,15 +2,17 @@ package org.ciroque.countries
 
 import akka.actor.ActorRefFactory
 import org.ciroque.countries.model.Country
-import org.specs2.mutable.Specification
-import spray.http.{StatusCodes, HttpHeader}
+import org.ciroque.countries.utils.MockCountryDataLoader
+import org.scalatest.{FunSpec, Matchers}
 import spray.http.HttpHeaders.RawHeader
 import spray.http.MediaTypes._
-import spray.testkit.Specs2RouteTest
+import spray.http.{HttpHeader, StatusCodes}
+import spray.testkit.ScalatestRouteTest
 
 class CountryServiceSpec
-  extends Specification
-  with Specs2RouteTest
+  extends FunSpec
+  with Matchers
+  with ScalatestRouteTest
   with CountryService {
 
   override lazy implicit val countries: Option[List[Country]] = MockCountryDataLoader.load()
@@ -24,127 +26,116 @@ class CountryServiceSpec
   }
 
   def assertHalLinks(body: String, supplemental: String) = {
-    body must contain("_links")
-    body must contain("self")
-    body must contain(supplemental)
+    body should include("_links")
+    body should include("self")
+    body should include(supplemental)
   }
 
   def assertNoHalLinks(body: String) = {
-    body must not contain "_links"
-    body must not contain "self"
+    body should not contain "_links"
+    body should not contain "self"
   }
 
-  "CountryService" should {
-    "Return documentation instructions on the root path" in {
+  describe("CountryService") {
+    it("Return documentation instructions on the root path") {
       Get("/") ~> routes ~> check {
-        status must be(StatusCodes.OK)
+        status should be(StatusCodes.OK)
         assertCorsHeaders(headers)
-        contentType.mediaType mustEqual `application/json`
-        responseAs[String] must contain("countryCodeSearch")
+        contentType.mediaType should be(`application/json`)
+        responseAs[String] should include("countryCodeSearch")
       }
     }
 
-    "Return the full list of countries on the countries endpoint" in {
+    it("Return the full list of countries on the countries endpoint") {
       Get(s"/${Stringz.Routes.Countries}/") ~> routes ~> check {
-        status must be(StatusCodes.OK)
+        status should be(StatusCodes.OK)
         assertCorsHeaders(headers)
         assertHalLinks(responseAs[String], "")
         MockCountryDataLoader.countryList.foreach {
           country =>
-            responseAs[String] must contain(country.fullName)
+            responseAs[String] should include(country.fullName)
         }
-        contentType.mediaType mustEqual `application/json`
+        contentType.mediaType should be(`application/json`)
       }
     }
 
-    "Return the correct country from a valid country code" in {
+    it("Return the correct country from a valid country code") {
       val query = "?countryCode=US"
       Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
-        status must be(StatusCodes.OK)
+        status should be(StatusCodes.OK)
         assertCorsHeaders(headers)
         assertHalLinks(responseAs[String], query)
-        contentType.mediaType mustEqual `application/json`
-        responseAs[String] must contain("United States of America")
+        contentType.mediaType shouldEqual `application/json`
+        responseAs[String] should include("United States of America")
       }
     }
 
-    "Return the correct country from a valid country code in a case-insensitive manner" in {
+    it("Return the correct country from a valid country code in a case-insensitive manner") {
       val query = "?countryCode=us"
       Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
-        status must be(StatusCodes.OK)
+        status should be(StatusCodes.OK)
         assertCorsHeaders(headers)
         assertHalLinks(responseAs[String], query)
-        contentType.mediaType mustEqual `application/json`
-        responseAs[String] must contain("United States of America")
+        contentType.mediaType shouldEqual `application/json`
+        responseAs[String] should include("United States of America")
       }
     }
 
-    "Return the correct country from a valid country name" in {
+    it("Return the correct country from a valid country name") {
       val query = "?name=Canada"
       Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
-        status must be(StatusCodes.OK)
+        status should be(StatusCodes.OK)
         assertCorsHeaders(headers)
         assertHalLinks(responseAs[String], query)
-        contentType.mediaType mustEqual `application/json`
-        responseAs[String] must contain("People's Republic of Canadia")
+        contentType.mediaType shouldEqual `application/json`
+        responseAs[String] should include("People's Republic of Canadia")
       }
     }
 
-    "Return the correct country from a valid country name in a case-insensitive manner" in {
+    it("Return the correct country from a valid country name in a case-insensitive manner") {
       val query = "?name=canada"
       Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
-        status must be(StatusCodes.OK)
+        status should be(StatusCodes.OK)
         assertCorsHeaders(headers)
         assertHalLinks(responseAs[String], query)
-        contentType.mediaType mustEqual `application/json`
-        responseAs[String] must contain("People's Republic of Canadia")
+        contentType.mediaType shouldEqual `application/json`
+        responseAs[String] should include("People's Republic of Canadia")
       }
     }
 
-    "Return a 404 when given an invalid country code" in {
+    it("Return a 404 when given an invalid country code") {
       val query = "?countryCode=ZZ"
       Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
-        status must be(StatusCodes.NotFound)
+        status should be(StatusCodes.NotFound)
         assertCorsHeaders(headers)
         assertNoHalLinks(responseAs[String])
-        contentType.mediaType mustEqual `application/json`
-        responseAs[String] mustEqual "{}"
+        contentType.mediaType shouldEqual `application/json`
+        responseAs[String] shouldEqual "{}"
       }
     }
 
-    "Return a 404 when given an invalid country name" in {
+    it("Return a 404 when given an invalid country name") {
       val query = "?name=bolshevic"
       Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
-        status must be(StatusCodes.NotFound)
+        status should be(StatusCodes.NotFound)
         assertCorsHeaders(headers)
         assertNoHalLinks(responseAs[String])
-        contentType.mediaType mustEqual `application/json`
-        responseAs[String] mustEqual "{}"
+        contentType.mediaType shouldEqual `application/json`
+        responseAs[String] shouldEqual "{}"
       }
     }
 
-    "Return a 404 when given an invalid country name" in {
-      val query = "?name=bolshevic"
-      Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
-        status must be(StatusCodes.NotFound)
-        assertCorsHeaders(headers)
-        assertNoHalLinks(responseAs[String])
-        contentType.mediaType mustEqual `application/json`
-        responseAs[String] mustEqual "{}"
-      }
-    }
-
-    "Return results of a multiple country code query" in {
+    it("Return results of a multiple country code query") {
       val query = "?countryCodes=US,CA,LU"
       Get(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
-        status must be(StatusCodes.OK)
+        status should be(StatusCodes.OK)
         assertCorsHeaders(headers)
         assertHalLinks(responseAs[String], query)
-        contentType.mediaType mustEqual `application/json`
-        responseAs[String] must contain("United States of America")
-        responseAs[String] must contain("Canada")
-        responseAs[String] must contain("Luxembourg")
-        responseAs[String] must not contain "Mexico"
+        contentType.mediaType shouldEqual `application/json`
+        responseAs[String] should include("United States of America")
+        responseAs[String] should include("Canada")
+        responseAs[String] should include("Luxembourg")
+        responseAs[String] should not contain "Mexico"
       }
     }
   }

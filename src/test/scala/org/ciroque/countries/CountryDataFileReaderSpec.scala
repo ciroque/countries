@@ -1,16 +1,19 @@
 package org.ciroque.countries
 
 import org.ciroque.countries.model.Country
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.{FunSpec, FlatSpec, Matchers}
 
-class CountryDataFileReaderSpec extends FlatSpec with Matchers {
-  "CountryDataFileReader" should "load a valid file and convert it to a List[Country]" in {
+class CountryDataFileReaderSpec extends FunSpec with Matchers {
+  describe("CountryDataFileReader") {
+
+  }
+  it("should load a valid file and convert it to a List[Country]") {
     val reader = new CountryDataFileReader("/countries.json")
     val countriesOption = reader.load()
     countriesOption shouldBe 'defined
   }
 
-  it should "return an empty list for an empty data file" in {
+  it("should return an empty list for an empty data file") {
     val reader = new CountryDataFileReader("/testdata/empty-countries.json")
     val countriesOption = reader.load()
     countriesOption shouldBe Some(List[Country]())
@@ -20,7 +23,7 @@ class CountryDataFileReaderSpec extends FlatSpec with Matchers {
     countries.length should be(0)
   }
 
-  it should "return None when given a malformed file" in {
+  it("should return None when given a malformed file") {
     val reader = new CountryDataFileReader("/testdata/malformed-countries.json")
     val countriesOption = reader.load()
     countriesOption should be(None)

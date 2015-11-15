@@ -1,5 +1,6 @@
-package org.ciroque.countries
+package org.ciroque.countries.utils
 
+import org.ciroque.countries.CountryDataLoader
 import org.ciroque.countries.model.{Country, ParentGeoNode}
 
 object MockCountryDataLoader extends CountryDataLoader {

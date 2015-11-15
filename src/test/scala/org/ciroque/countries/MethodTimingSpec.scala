@@ -1,11 +1,13 @@
 package org.ciroque.countries
 
 import org.ciroque.countries.core.{Logger, MethodTiming}
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.{FunSpec, FlatSpec, Matchers}
 
 import scala.language.postfixOps
 
-class MethodTimingSpec extends FlatSpec with Matchers {
+class MethodTimingSpec
+  extends FunSpec
+  with Matchers {
 
   class MockLogger extends Logger {
 
@@ -21,24 +23,26 @@ class MethodTimingSpec extends FlatSpec with Matchers {
     override def info(entry: String): Unit = logEntry("info", entry)
   }
 
-  it should "MethodTiming runs given function and times it..." in {
-    val message: String = "This is in the MethodTiming execution"
-    val functionToPerform = println(message)
-    implicit val logger = new MockLogger
-    MethodTiming("TESTING", logger) {
-      functionToPerform
+  describe("MethodTiming") {
+    it("should MethodTiming runs given function and times it..." ) {
+      val message: String = "This is in the MethodTiming execution"
+      val functionToPerform = println(message)
+      implicit val logger = new MockLogger
+      MethodTiming("TESTING", logger) {
+        functionToPerform
+      }
+
+      val entry = logger.entries.head
+      entry._1 shouldEqual "debug"
+
+      import spray.json._
+      val methodTimingEntryFields = entry._2.parseJson.asJsObject.fields
+
+      methodTimingEntryFields should contain key "name"
+      methodTimingEntryFields.getOrElse("name", "") should be(JsString("TESTING"))
+      methodTimingEntryFields should contain key "start"
+      methodTimingEntryFields should contain key "end"
+      methodTimingEntryFields should contain key "duration"
     }
-
-    val entry = logger.entries.head
-    entry._1 shouldEqual "debug"
-
-    import spray.json._
-    val methodTimingEntryFields = entry._2.parseJson.asJsObject.fields
-
-    methodTimingEntryFields should contain key "name"
-    methodTimingEntryFields.getOrElse("name", "") should be (JsString("TESTING"))
-    methodTimingEntryFields should contain key "start"
-    methodTimingEntryFields should contain key "end"
-    methodTimingEntryFields should contain key "duration"
   }
 }

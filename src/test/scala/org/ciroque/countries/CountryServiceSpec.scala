@@ -215,5 +215,78 @@ class CountryServiceSpec
         }
       }
     }
+
+    describe("HTTP OPTIONS") {
+      it("returns the full list of countries on the countries endpoint") {
+        Options(s"/${Stringz.Routes.Countries}/") ~> routes ~> check {
+          status should be(StatusCodes.OK)
+          assertCorsHeaders(headers)
+          responseAs[String] should be("")
+        }
+      }
+
+      it("returns the correct country from a valid country code") {
+        val query = "?countryCode=US"
+        Options(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
+          status should be(StatusCodes.OK)
+          assertCorsHeaders(headers)
+          responseAs[String] should be("")
+        }
+      }
+
+      it("returns the correct country from a valid country code in a case-insensitive manner") {
+        val query = "?countryCode=us"
+        Options(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
+          status should be(StatusCodes.OK)
+          assertCorsHeaders(headers)
+          responseAs[String] should be("")
+        }
+      }
+
+      it("returns the correct country from a valid country name") {
+        val query = "?name=Canada"
+        Options(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
+          status should be(StatusCodes.OK)
+          assertCorsHeaders(headers)
+          responseAs[String] should be("")
+        }
+      }
+
+      it("returns the correct country from a valid country name in a case-insensitive manner") {
+        val query = "?name=canada"
+        Options(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
+          status should be(StatusCodes.OK)
+          assertCorsHeaders(headers)
+          responseAs[String] should be("")
+        }
+      }
+
+      it("returns a 200 when given an invalid country code") {
+        val query = "?countryCode=ZZ"
+        Options(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
+          status should be(StatusCodes.OK)
+          assertCorsHeaders(headers)
+          responseAs[String] should be("")
+        }
+      }
+
+      it("returns a 200 when given an invalid country name") {
+        val query = "?name=bolshevic"
+        Options(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
+          status should be(StatusCodes.OK)
+          assertCorsHeaders(headers)
+          responseAs[String] should be("")
+        }
+      }
+
+      it("returns results of a multiple country code query") {
+        val query = "?countryCodes=US,CA,LU"
+        Options(s"/${Stringz.Routes.Countries}$query") ~> routes ~> check {
+          status should be(StatusCodes.OK)
+          assertCorsHeaders(headers)
+          responseAs[String] should be("")
+        }
+      }
+    }
   }
 }

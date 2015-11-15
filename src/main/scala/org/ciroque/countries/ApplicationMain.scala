@@ -16,5 +16,5 @@ object ApplicationMain extends App {
 
   val dataFileReader = new CountryDataFileReader("/countries.json")
   val service = system.actorOf(Props(new CountryServiceActor(dataFileReader)), "country-service-actor")
-  IO(Http) ? Http.Bind(service, interface = "localhost", port = 35784)
+  IO(Http) ? Http.Bind(service, interface = "0.0.0.0", port = 35784)
 }

@@ -32,7 +32,7 @@ trait CountryService extends HttpService {
   val corsHeaders = List(
     RawHeader("Access-Control-Allow-Origin", "*"),
     RawHeader("Access-Control-Allow-Headers", "Content-Type"),
-    RawHeader("Access-Control-Allow-Methods", "GET")
+    RawHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS")
   )
 
   def performQueryAndRespond(query: Query, uri: Uri, includeBody: Boolean = true): routing.Route = {
@@ -75,7 +75,7 @@ trait CountryService extends HttpService {
             RootResponse("Countries of the World", Map("countryCodeSearch" -> "/countries/{countryCode}"))
           }
         }
-      }
+      } ~ options { respondWithHeaders(corsHeaders) { complete("") } }
     }
 
   @ApiOperation(value = "All countries end-point", notes = "", httpMethod = "GET"/*, response = classOf[CountryResponse]*/)
@@ -87,7 +87,7 @@ trait CountryService extends HttpService {
         } ~
         head {
           performQueryAndRespond(new EmptyQuery(), uri, DO_NOT_INCLUDE_BODY)
-        }
+        } ~ options { respondWithHeaders(corsHeaders) { complete("") } }
       }
     }
   }
@@ -106,7 +106,7 @@ trait CountryService extends HttpService {
             parameters("countryCodes") { query =>
               performQueryAndRespond(new CountryCodesQuery(query.split(",").toList), uri, DO_NOT_INCLUDE_BODY)
             }
-          }
+          } ~ options { respondWithHeaders(corsHeaders) { complete("") } }
       }
     }
   }
@@ -125,7 +125,7 @@ trait CountryService extends HttpService {
             parameters("countryCode") { query =>
               performQueryAndRespond(new CountryCodeQuery(query), uri, DO_NOT_INCLUDE_BODY)
             }
-          }
+          } ~ options { respondWithHeaders(corsHeaders) { complete("") } }
       }
     }
   }
@@ -144,7 +144,7 @@ trait CountryService extends HttpService {
             parameters("name") { query =>
               performQueryAndRespond(new CountryNameQuery(query), uri, DO_NOT_INCLUDE_BODY)
             }
-          }
+          } ~ options { respondWithHeaders(corsHeaders) { complete("") } }
       }
     }
   }

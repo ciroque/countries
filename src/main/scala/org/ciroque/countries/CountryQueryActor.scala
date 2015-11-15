@@ -25,7 +25,7 @@ class CountryQueryActor(countries: List[Country]) extends Actor {
       println(s"!!!! CountryQueryActor:: Something else"); throw new IllegalArgumentException("Not sure what happened...")
   }
 
-  private def filterCountries(countryFilter: Country => Boolean) = {
+  private def filterCountries(countryFilter: Country => Boolean): Option[List[Country]] = {
     countries.filter(countryFilter) match {
       case found if found.isEmpty => None
       case found => Some(found)

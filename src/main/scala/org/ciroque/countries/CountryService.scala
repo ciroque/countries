@@ -27,13 +27,15 @@ trait CountryService extends HttpService {
   implicit val countries: Option[List[Country]]
   val templeDataQuery: ActorRef = actorRefFactory.actorOf(Props(classOf[CountryQueryActor], countries.getOrElse(List())), "country-query")
 
+  final val DO_NOT_INCLUDE_BODY: Boolean = false
+
   val corsHeaders = List(
     RawHeader("Access-Control-Allow-Origin", "*"),
     RawHeader("Access-Control-Allow-Headers", "Content-Type"),
     RawHeader("Access-Control-Allow-Methods", "GET")
   )
 
-  def performQueryAndRespond(query: Query, uri: Uri): routing.Route = {
+  def performQueryAndRespond(query: Query, uri: Uri, includeBody: Boolean = true): routing.Route = {
     MethodTiming("performQueryAndRespond") {
       val something = templeDataQuery ? query
       val somethingElse = something.mapTo[Option[List[Country]]]
@@ -55,7 +57,7 @@ trait CountryService extends HttpService {
                 import org.ciroque.countries.responses.CountryResponseProtocol._
                 import spray.json._
                 val (httpStatus, links) = statusCode(list)
-                val body = CountryResponse(list, links).toJson.toString()
+                val body = if(includeBody) CountryResponse(list, links).toJson.toString() else ""
                 HttpResponse(httpStatus, body)
             }
           }
@@ -82,6 +84,9 @@ trait CountryService extends HttpService {
       requestUri { uri =>
         get {
           performQueryAndRespond(new EmptyQuery(), uri)
+        } ~
+        head {
+          performQueryAndRespond(new EmptyQuery(), uri, DO_NOT_INCLUDE_BODY)
         }
       }
     }
@@ -96,7 +101,12 @@ trait CountryService extends HttpService {
           parameters("countryCodes") { query =>
             performQueryAndRespond(new CountryCodesQuery(query.split(",").toList), uri)
           }
-        }
+        } ~
+          head {
+            parameters("countryCodes") { query =>
+              performQueryAndRespond(new CountryCodesQuery(query.split(",").toList), uri, DO_NOT_INCLUDE_BODY)
+            }
+          }
       }
     }
   }
@@ -110,7 +120,12 @@ trait CountryService extends HttpService {
           parameters("countryCode") { query =>
             performQueryAndRespond(new CountryCodeQuery(query), uri)
           }
-        }
+        } ~
+          head {
+            parameters("countryCode") { query =>
+              performQueryAndRespond(new CountryCodeQuery(query), uri, DO_NOT_INCLUDE_BODY)
+            }
+          }
       }
     }
   }
@@ -124,7 +139,12 @@ trait CountryService extends HttpService {
           parameters("name") { query =>
             performQueryAndRespond(new CountryNameQuery(query), uri)
           }
-        }
+        } ~
+          head {
+            parameters("name") { query =>
+              performQueryAndRespond(new CountryNameQuery(query), uri, DO_NOT_INCLUDE_BODY)
+            }
+          }
       }
     }
   }

@@ -35,31 +35,29 @@ trait CountryService extends HttpService {
     RawHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS")
   )
 
-  def performQueryAndRespond(query: Query, uri: Uri, includeBody: Boolean = true): routing.Route = {
-    MethodTiming("performQueryAndRespond") {
-      val something = templeDataQuery ? query
-      val somethingElse = something.mapTo[Option[List[Country]]]
+  def performQueryAndRespond(query: Query, uri: Uri, includeBody: Boolean = true): routing.Route = MethodTiming("performQueryAndRespond") {
+    val something = templeDataQuery ? query
+    val somethingElse = something.mapTo[Option[List[Country]]]
 
-      def statusCode(countries: Option[List[Country]]): (StatusCode, Option[Map[String, Href]]) = countries match {
-        case None => (StatusCode.int2StatusCode(404), None)
-        case Some(_) => (StatusCode.int2StatusCode(200), Some(buildLinks()))
-      }
+    def statusCode(countries: Option[List[Country]]): (StatusCode, Option[Map[String, Href]]) = countries match {
+      case None => (StatusCode.int2StatusCode(404), None)
+      case Some(_) => (StatusCode.int2StatusCode(200), Some(buildLinks()))
+    }
 
-      def buildLinks(): Map[String, Href] = {
-        Map("self" -> new Href(uri.toString(), false))
-      }
+    def buildLinks(): Map[String, Href] = {
+      Map("self" -> new Href(uri.toString(), false))
+    }
 
-      respondWithMediaType(`application/json`) {
-        respondWithHeaders(corsHeaders) {
-          complete {
-            somethingElse.map {
-              list =>
-                import org.ciroque.countries.responses.CountryResponseProtocol._
-                import spray.json._
-                val (httpStatus, links) = statusCode(list)
-                val body = if(includeBody) CountryResponse(list, links).toJson.toString() else ""
-                HttpResponse(httpStatus, body)
-            }
+    respondWithMediaType(`application/json`) {
+      respondWithHeaders(corsHeaders) {
+        complete {
+          somethingElse.map {
+            list =>
+              import org.ciroque.countries.responses.CountryResponseProtocol._
+              import spray.json._
+              val (httpStatus, links) = statusCode(list)
+              val body = if(includeBody) CountryResponse(list, links).toJson.toString() else ""
+              HttpResponse(httpStatus, body)
           }
         }
       }
